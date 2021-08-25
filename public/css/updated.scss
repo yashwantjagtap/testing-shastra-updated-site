@@ -1,0 +1,572 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+a {
+    color: #fff;
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+p,
+ul {
+    margin: 0;
+}
+i {
+    margin-right: 4px;
+}
+
+.mentor-section {
+    position: relative !important;
+    background-color: #1f598b;
+    height: 60%;
+    color: #fff;
+    background-image: url(../images/background/dot-background-png-23.png);
+    background-repeat: no-repeat;
+    background-position: right bottom, center;
+    background-size: 25% 90%;
+    padding-bottom: 6em;
+    #enlighten-breadcrumb {
+        margin-top: 2em;
+    }
+    .course-introduction {
+        margin-top: 2em;
+        .course-title {
+            font-size: 2.1em;
+            text-decoration: underline 0.08em;
+            font-weight: 600;
+            text-transform: capitalize;
+        }
+        .course-rating {
+            margin: 0.5em;
+            span:nth-child(2) {
+                margin-left: 2.2em;
+            }
+        }
+        .course-description {
+            width: 95%;
+            margin-top: 2em;
+            text-align: justify;
+            font-size: 15px;
+            
+        }
+        .highlighter {
+            display: inline-block;
+            margin-top: 1.5em;
+            padding-left: 0.5em;
+            background-image: linear-gradient(to right, #00dbde, #fb00ff00);
+            line-height: 34px;
+            border-radius: 5px;
+            img {
+                height: 20px;
+                width: 20px;
+            }
+        }
+    }
+    .course-mentor {
+        margin-top: 3em;
+        text-align: center;
+        .mentor-img {
+            margin-top: 2em;
+            max-width: 10em;
+            border: 2px solid rgb(155, 155, 155);
+            border-radius: 50%;
+            padding: 3px;
+        }
+        p {
+            padding-top: 0.2em;
+        }
+    }
+}
+.key-feature {
+    position: absolute;
+    width: inherit;
+    top: 85%;
+    left: 9%;
+    right: 9%;
+    // width: 80%;
+    // text-align: center;
+    // transform: translateY(-50% -50%);
+    margin: auto;
+    border: 1px solid rgb(231, 231, 231);
+    border-radius: 6px;
+    box-shadow: 0px 0px 5px 5px rgba(131, 128, 128, 0.158);
+    background-color: #fff;
+    z-index: 55;
+    // background-image: url(images/background/services-right-dec.png);
+    // background-repeat: no-repeat;
+    // background-position: center;
+
+    h3 {
+        font-size: 18px;
+        text-align: center;
+        padding-top: 1em;
+        color: #828282 !important;
+    }
+    .after-affect-1 {
+        width: 200px;
+        margin: 0 auto;
+        height: 16px;
+        position: relative;
+        &::before {
+            background: url(../images/style1.png) no-repeat;
+            position: absolute;
+            content: "";
+            height: 16px;
+            width: 16px;
+            top: 0%;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+        }
+        &::after {
+            background: #ececec;
+            height: 1px;
+            width: 100%;
+            position: absolute;
+            z-index: 999;
+            top: 50%;
+            content: "";
+            left: 0;
+            right: 0;
+        }
+    }
+
+    .key-flex {
+        padding: 1em 0em;
+        -webkit-column-count: 3;
+        // display: flex;
+        & :nth-child(1),
+        :nth-child(2),
+        :nth-child(3),
+        :nth-child(4),
+        :nth-child(5),
+        :nth-child(6) {
+            border-right: 2px solid rgba(182, 182, 182, 0.774);
+        }
+        li {
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            color: #828282;
+            padding-bottom: 0.5em;
+        }
+    }
+}
+.course-detail {
+    background-color: #f3f3f3;
+    // height: 100vh;
+    .row {
+        padding-top: 3.5em;
+    }
+    .left-body {
+        margin-top: 5em;
+        .course-info,
+        .available-section,
+        .course-benefits,
+        .Syllabus-section {
+            border-radius: 5px;
+            box-shadow: 0 5px 5px #e5e5e5;
+            padding: 0.5em 2em;
+            border: 1px solid #dfdfdf9c;
+            background-color: #fff;
+            margin-bottom: 2em;
+            h3 {
+                margin-top: 1em;
+                text-align: center;
+                font-size: 16px;
+                color: #828282 !important;
+            }
+            .specification-list {
+                -webkit-column-count: 2;
+                padding: 1.5em 0;
+                li {
+                    padding: 0.5em;
+                    font-size: 14px;
+                    line-height: 22px;
+                    text-indent: -1em;
+                    padding-left: 1em;
+                }
+                li::before {
+                    content: "✓" !important;
+                    color: green;
+                    font-weight: 900;
+                    margin-right: 5px;
+                }
+            }
+            .bottom-line {
+                height: 1px;
+                margin: 0 auto 0.5em;
+                background-color: rgba(182, 182, 182, 0.507);
+                filter: drop-shadow(1px 2px 1px rgba(182, 182, 182, 0.699));
+            }
+            .you-tube {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: 1em;
+
+                h5 {
+                    text-align: center;
+                    color: #828282;
+                    text-transform: capitalize;
+                    font-size: 15px;
+                }
+                .move-right {
+                    padding: 0.5em 1em;
+                    background-color: #3f51b5;
+                    border-radius: 50px;
+                    box-shadow: 0px 2px 5px #cfcfcf;
+
+                    &:hover {
+                        box-shadow: none;
+                        background-color: #6270c2;
+                    }
+                    a {
+                        color: #ffffff;
+                        text-decoration: none !important;
+                        i {
+                            margin-right: 5px !important;
+                        }
+                    }
+                }
+            }
+            .available-sec-head {
+                padding: 2em 1.5em 0;
+                h2 {
+                    font-size: 1.05em;
+                    color: #828282;
+                }
+            }
+            .available-section-body {
+                padding: 2em 1.5em 0.5em;
+                ul {
+                    :last-child {
+                        background-color: #142bad;
+                        float: right;
+                        cursor: pointer;
+                        box-shadow: 0px 2px 5px #cfcfcf;
+                        &::after {
+                            clear: both !important;
+                        }
+                        i {
+                            box-shadow: none;
+                            margin: 0.2em 0.5em;
+                        }
+                    }
+                    li {
+                        cursor:text;
+                        display: inline-block;
+                        vertical-align: top;
+                        padding: 8px 15px;
+                        background-color: #3f51b5;
+                        color: #ffffff;
+                        border-radius: 50px;
+                        margin: 0px 5px 5px 0px;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        box-shadow: 0px 2px 5px #cfcfcf;
+                    }
+                    :hover {
+                        box-shadow: none;
+                    }
+                }
+            }
+            .benefits-head {
+                padding: 0.5em 1em;
+                color: #828282;
+                font-size: 18px;
+                text-align: left !important;
+                text-transform: capitalize;
+                margin: 0;
+            }
+            .benefits-list {
+                padding: 0em 1em 1em;
+                li {
+                    list-style: decimal;
+                    font-size: 15px;
+                    color: #828282;
+                    padding: 0.5em;
+                }
+            }
+            .Syllabus-header {
+                h3 {
+                    font-size: 22px;
+                }
+            }
+            .Syllabus-sub-header {
+                h3 {
+                    font-size: 17px;
+                    color: #53579b !important;
+                    text-align: left;
+                }
+                ul {
+                    padding: 0.5em 2em;
+                    li {
+                        color: #828282;
+                        font-size: 14px;
+                        font-weight: 500;
+                        list-style-type: disc;
+                        text-transform: capitalize;
+                    }
+                }
+            }
+            .syllabus-body {
+                padding: 1em;
+                background-color: #f3f3f3;
+                margin: 1em 0;
+                border-radius: 3px;
+                box-shadow: 1px 1px 1px #bebebe62;
+                h3 {
+                    color: #142bad !important;
+                    text-transform: capitalize;
+                    margin: 1em;
+                }
+                .after-affect-1 {
+                    width: 200px;
+                    margin: 10px auto;
+                    height: 16px;
+                    position: relative;
+                    &::before {
+                        background: url(../images/style1.png) no-repeat;
+                        position: absolute;
+                        content: "";
+                        height: 16px;
+                        width: 16px;
+                        top: 0%;
+                        left: 0;
+                        right: 0;
+                        margin: 0 auto;
+                    }
+                    &::after {
+                        background: #ececec;
+                        height: 1px;
+                        width: 100%;
+                        position: absolute;
+                        z-index: 999;
+                        top: 50%;
+                        content: "";
+                        left: 0;
+                        right: 0;
+                    }
+                }
+                .syllabus-list {
+                    ol {
+                        counter-reset: section;
+                        list-style: none !important;
+                        margin-bottom: 5px;
+                        li {
+                            font-size: 14px;
+                            line-height: 20px;
+                            list-style: none !important;
+                            font-weight: 600;
+                            text-transform: capitalize;
+                            a {
+                                color: #142bad;
+                                &:hover {
+                                    color: #3f51b5;
+                                }
+                            }
+                            &::before {
+                                counter-increment: section;
+                                content: counters(section, ".") " : ";
+                                margin-right: 5px;
+                            }
+                        }
+                    }
+                }
+            }
+            .download-syllabus {
+                display: flex;
+                margin: 12px auto;
+                justify-content: flex-end;
+                align-items: center;
+                a {
+                    background-color: #3f51b5;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+                    border: 1px solid transparent;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                    transition: 0.2s ease-in-out;
+                    &:link,
+                    :visited,
+                    :active {
+                        color: #ffffff;
+                    }
+                    &:hover {
+                        background-color: #ffffff;
+                        color: #3f51b5;
+                        border: 1px solid #3f51b5;
+                    }
+                    i {
+                        margin-left: 5px;
+                    }
+                }
+            }
+        }
+    }
+    .right-body {
+        margin-top: 5em;
+        .contact-us,
+        .student-review {
+            border-radius: 5px;
+            box-shadow: 0 5px 5px #e5e5e5;
+            padding: 0.5em 2em;
+            border: 1px solid #dfdfdf9c;
+            background-color: #fff;
+            margin-bottom: 2em;
+            .form-header {
+                text-align: center;
+                .text {
+                    padding: 1em 0.5em 0.5em;
+                    font-weight: 500;
+                    color: #828282 !important;
+                }
+                small {
+                    color: #828282;
+                }
+            }
+            .form-body {
+                text-align: center;
+                .call-number {
+                    display: inline-block;
+                    background-color: #3f51b5;
+                    font-size: 15px;
+                    padding: 0.5em 0.9em;
+                    border-radius: 50px;
+                    margin: 0.8em 0;
+                    a {
+                        color: rgba(255, 255, 255, 0.836);
+                        text-decoration: none;
+                    }
+                    i {
+                        vertical-align: middle;
+                        color: #fff;
+                        font-size: 20px;
+                    }
+                }
+                .input-group {
+                    padding-bottom: 10px;
+                    &:last-child {
+                        padding: 0;
+                    }
+                    .form-control {
+                        border: 0px;
+                        border-radius: 0;
+                        border-bottom: 1px solid #9fa8dd;
+                        &:focus {
+                            outline: 0px !important;
+                            border-bottom: 1.7px solid #ff0000;
+                            box-shadow: none !important;
+                        }
+                    }
+                    .submit {
+                        margin: 1em auto;
+                        padding: 0.3em 1.5em;
+                        background-color: #3f51b5;
+                        border: 1.8px solid transparent;
+                        border-radius: 50px;
+                        color: #fff;
+                        transition: 0.2s ease-in-out;
+                        box-shadow: none;
+                    
+                        &:hover{
+                            background-color: #ffffff;
+                            color: #3f51b5;
+                            font-weight: 500;
+                            border: 1.8px solid #3f51b5af;
+                        }
+                        &:focus{
+                            outline: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+        .student-review {
+            max-height: 150vh;
+            overflow-y: auto;
+            &::-webkit-scrollbar-track-piece {
+                box-shadow: inset 0 0 12px rgba(159, 213, 226, 0.699);
+            }
+            &::-webkit-scrollbar {
+                width: 5px;
+                cursor: pointer !important;
+            }
+            &::-webkit-scrollbar-thumb {
+                border-radius: 10px;
+                background-image: linear-gradient(180deg, rgb(95, 95, 206) 20.2%, rgba(0, 212, 255, 1) 100.2%);
+            }
+            .card-head {
+                padding: 15px 35px 5px;
+                h6 {
+                    color: #828282;
+                    font-size: 15px;
+                    text-align: center;
+                    line-height: 22px;
+                    margin: 0px;
+                    text-transform: capitalize;
+                }
+            }
+            .review-section {
+                padding: 15px 10px;
+                border-bottom: 1px solid #c9c9c9;
+                &:last-child {
+                    border: 0px !important;
+                }
+                p {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                    color: #828282;
+                    text-indent: 20px;
+                    text-align: justify;
+                    &::first-letter {
+                        text-transform: uppercase;
+                    }
+                }
+                .student-img {
+                    float: left;
+                    margin-right: 10px;
+                    padding: 10px;
+                    img {
+                        max-width: 4em;
+                        // max-height: 4em;
+                        border-radius: 0% 100% 75% 64% / 42% 83% 66% 100%;
+                        box-shadow: 5px 5px 5px #e2e1e1;
+                        transition: 0.5s ease-in-out;
+                        &::after {
+                            clear: both !important;
+                        }
+                        &:hover {
+                            box-shadow: rgb(211, 211, 211) 5px -5px, rgb(228, 228, 228) 10px -10px,
+                                rgb(245, 245, 245) 15px -15px;
+                            transform: scale(1.1);
+                        }
+                    }
+                }
+                .student-info {
+                    span {
+                        font-size: 13px;
+                        font-weight: 600;
+                        line-height: 19px;
+                    }
+                    p {
+                        text-indent: 0px;
+                    }
+                }
+                .student-rating {
+                    i {
+                        color: #f7be13;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}

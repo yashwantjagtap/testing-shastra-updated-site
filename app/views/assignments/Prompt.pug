@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  head
+    style.
+      .assignment-page{
+      height: 30vh;
+      margin: 100px 200px;
+      text-align: center; 
+      }
+      h2{
+        font-size:28px;
+      } 
+      .alert-btn{
+        padding: 10px 20px;
+        background: #2d7fc7;
+        border-radius: 30px;
+        color:#ffffff;
+        font-size:18px; 
+      }   
+      .alert-btn:hover{
+      color:#2d7fc7;
+      background:#fff;
+      border:2px solid #2d7fc7;
+      font-weight:600;
+      }
+      #demo{
+      margin-top:30px;
+      color:#00000 !important;
+      font-weight:bold;
+      font-size:18px;
+      }
+
+
+  <body>
+
+  include ../include/head.pug
+  include ../include/nav.pug
+
+    .assignment-page
+      h2 Click the button to demonstrate the prompt box.
+      button.alert-btn(onclick="myFunction()") Click Me
+      p#demo
+
+
+include ../include/footer.pug    
+  script.
+    function myFunction() {
+      var person = prompt("Please enter your name", "Testing Shastra");
+      var age=prompt("Enter your age","000");
+      if (person != null) {
+        document.getElementById("demo").innerHTML =
+        "Hello " + person + "! How are you today?";
+      }else{
+        document.getElementById("demo").innerHTML =
+        "Please enter valid input"
+      }
+    }
+</body>
+</html>

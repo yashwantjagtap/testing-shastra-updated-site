@@ -1,0 +1,775 @@
+.header-banner-container {
+  background-image: url(/images/background/assignment.jpg);
+  background-repeat: repeat;
+}
+
+.title_two,
+.portfolio_slider_wrap .anchor_title_wrap a:hover,
+#section_achieve .bg_achieve .wrap_counter .counter_count,
+#section_faq_testimonial .faq_wrap .faq_title,
+#section_faq_testimonial .test_wrap .title_test,
+#section_cta .button_cta a:hover,
+.entry-footer a:hover,
+.entry-footer a:focus,
+.entry-footer a:active,
+ul#follow_us_contacts li a:hover i,
+.rn_title a:hover,
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price {
+  color: #2d7fc7;
+}
+
+.widget ul li:hover:after,
+.widget ul li a:hover,
+#secondary .footer_RN_wrap .tn_title a:hover,
+#primary .entry-title a:hover,
+.contact-info-wrap ul li a:hover {
+  color: rgba(45, 127, 199, 0.8);
+}
+
+.main-navigation,
+.main-navigation.top ul ul,
+#section_service .service_slider.owl-carousel,
+.wrap_video .video_wrap .play-pause-video,
+#section_cta,
+.recent_news .rn_title_content .ln_date,
+#section_news_twitter_message .twitter_wrap,
+.faq_dot:before,
+.main-navigation ul ul.sub-menu > li > a,
+.search-form:before,
+#secondary h2.widget-title:before,
+.nav-links a,
+.contact-form-wrap form input[type="submit"],
+.woocommerce span.onsale,
+.woocommerce #respond input#submit,
+.woocommerce #respond input#submit.alt,
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce-account .woocommerce-MyAccount-navigation ul {
+  background: #2d7fc7;
+}
+
+.service_slider .content_wrap .title_content_service {
+  color: #d5e5f4;
+}
+
+.service_slider.owl-carousel .owl-controls .owl-nav div {
+  color: #d5e5f4;
+}
+
+.service_slider .content_wrap:after {
+  background: #abcce9;
+}
+
+.service_slider.owl-carousel:before,
+#section_cta .title_section_cta,
+.twitter_wrap .aptf-single-tweet-wrapper {
+  border-color: #abcce9;
+}
+
+#section_news_twitter_message .recent_news .rn_content_loop .rn_image,
+.contact-form-wrap form input[type="submit"]:hover,
+#section_news_twitter_message
+.recent_news
+.rn_content_loop
+.rn_image:hover
+span,
+.woocommerce #respond input#submit.alt:hover,
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover {
+  background: rgba(45, 127, 199, 0.65);
+}
+
+.main-navigation ul ul li,
+.main-navigation ul ul ul li {
+  background: rgba(45, 127, 199, 0.8);
+}
+
+.portfolio_slider_wrap.owl-carousel .owl-controls .owl-dot.active span,
+.portfolio_slider_wrap.owl-carousel .owl-controls .owl-dot span:hover,
+#section_faq_testimonial
+.faq_cat_wrap
+.bx-wrapper
+.bx-pager.bx-default-pager
+a:hover,
+#section_faq_testimonial
+.faq_cat_wrap
+.bx-wrapper
+.bx-pager.bx-default-pager
+a.active,
+#secondary .search-form .search-submit,
+#primary .error-404.not-found .search-form .search-submit,
+.not-found .search-form .search-submit,
+.site-footer .widget_search .search-submit,
+ul#follow_us_contacts li a:hover i {
+  border-color: #2d7fc7;
+}
+
+.woocommerce-account .woocommerce-MyAccount-navigation ul li {
+  border-color: #abcce9;
+}
+
+#section_news_slide,
+#section_faq_testimonial .test_faq_wrap .faq_question.expanded .plus_minus_wrap,
+#section_faq_testimonial
+.test_faq_wrap
+.faq_question.expanded
+.plus_minus_wrap:before,
+#section_news_twitter_message .recent_news .rn_title,
+#section_news_twitter_message .messag_wrap .rn_title {
+  background: #2d7fc7;
+}
+
+body,
+body p {
+  font-family: Lato;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Titillium Web;
+}
+
+.main-navigation a {
+  font-family: Open Sans;
+}
+
+.page-title-wrap {
+  padding: 0px !important;
+  padding-top: 10px !important;
+}
+
+.course-introduction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 60%;
+  padding-top: 5vh !important;
+  padding-bottom: 5vh !important;
+}
+
+.course-introduction .course-title {
+  text-transform: capitalize;
+  text-decoration: underline;
+  word-spacing: 8px;
+  margin: 10px 0 5px 0;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.course-introduction .course-rating {
+  text-transform: capitalize;
+}
+
+.course-introduction .course-rating span + span {
+  padding-left: 30px;
+}
+
+.course-introduction .course-rating::before {
+  content: "\f005  \f005  \f005  \f005  \f123  ";
+  font-family: FontAwesome;
+  color: #f5b237;
+}
+
+.course-introduction .course-description {
+  padding-top: 4vh;
+  text-align: justify;
+  text-indent: 30px;
+  text-transform: lowercase;
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.course-introduction .course-description::first-letter {
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.course-main-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 30px 0px !important;
+  color: #2b2b2b;
+}
+
+.course-main-section .course-info {
+  padding: 5px 0px;
+}
+
+.course-main-section .course-info .title {
+  font-size: 2em;
+}
+
+.course-main-section .course-info .title::before {
+  content: open-quote;
+  font-size: 1.5em;
+  margin: 0px 5px;
+}
+
+.course-main-section .course-info .title::after {
+  content: close-quote;
+  font-size: 1.5em;
+  margin: 0px 5px;
+}
+
+.course-main-section .course-info .disputation {
+  width: 75%;
+  font-size: 15px;
+}
+
+.course-main-section .course-feature-and-skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.course-main-section .course-feature-and-skills .course-feature {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.course-main-section .course-feature-and-skills .course-feature .title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: green;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 0px !important;
+}
+
+.course-main-section .course-feature-and-skills .course-feature .feature {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.course-main-section .course-feature-and-skills .course-feature .feature li {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding: 5px 10px;
+  border: 2px solid #9292fa;
+  margin: 5px;
+  border-radius: 20px;
+  font-size: 15px;
+}
+
+.course-main-section .course-feature-and-skills .course-feature .feature li::before {
+  content: "\f058";
+  font-family: FontAwesome;
+  margin-right: 5px;
+  font-size: 18px;
+  color: green;
+}
+
+.course-main-section .course-feature-and-skills .skills-details {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.course-main-section .course-feature-and-skills .skills-details .title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #353553;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 0px !important;
+}
+
+.course-main-section .course-feature-and-skills .skills-details .skills {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.course-main-section .course-feature-and-skills .skills-details .skills li {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 5px 0px;
+  margin: 5px;
+  font-size: 15px;
+}
+
+.course-main-section .course-feature-and-skills .skills-details .skills li::before {
+  content: "\f111";
+  font-family: FontAwesome;
+  margin-right: 20px;
+  font-size: 15px;
+  color: #9292fa;
+}
+
+.course-main-section .course-benefits .title {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #535353;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  margin: 0px !important;
+}
+
+.course-main-section .course-benefits .details {
+  font-size: 1.1em;
+  margin-left: 5px;
+}
+
+.course-curriculum-section {
+  padding: 30px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.course-curriculum-section .course-curriculum-main {
+  -ms-flex-preferred-size: 70%;
+      flex-basis: 70%;
+}
+
+.course-curriculum-section .course-curriculum-main .title {
+  font-size: 2em;
+  color: #202020;
+  font-weight: bold;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content {
+  padding-top: 25px;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .title {
+  font-size: 1.5em;
+  color: #202020;
+  font-weight: normal;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .details {
+  font-size: 1.1em;
+  color: #425b70;
+  width: 97%;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .course-syllabus {
+  font-size: 1.1em;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .course-syllabus ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-left: 30px;
+  width: 80%;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .course-syllabus ul li {
+  padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #dfdddd;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .course-syllabus ul li span {
+  color: blueviolet;
+  font-weight: bold;
+}
+
+.course-curriculum-section .course-curriculum-main .course-curriculum-content .course-syllabus ul li span i::before {
+  margin-right: 10px;
+  content: "\f124";
+  font-family: FontAwesome;
+}
+
+.course-curriculum-section .course-curriculum-form {
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-us {
+  border: 1px solid #b6d9f8;
+  padding: 10px 15px;
+  vertical-align: middle;
+  position: relative;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-us p {
+  font-size: 1em;
+  margin: 0px;
+  margin: 5px 0px;
+  color: #7c527c;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-us .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 2em;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-us .number::after {
+  content: "\f232";
+  color: forestgreen;
+  font-family: FontAwesome;
+  font-size: 1.5em;
+  position: relative;
+  right: 10px;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-us::after {
+  content: "";
+  width: 1px;
+  height: 70%;
+  position: absolute;
+  top: 20px;
+  right: 30%;
+  background-color: #b6d9f8;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form {
+  position: fixed;
+  z-index: 101;
+  top: 0px;
+  width: 300px;
+  padding: 10px;
+  border: 1px solid #424242;
+  top: 25%;
+  right: 0px;
+  background-color: white;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .title {
+  text-align: center;
+  padding: 10px 0px;
+  font-size: 18px;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 10px 10px;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group .form-control {
+  width: 100%;
+  border: 0px;
+  border-bottom: 1px solid #947394;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group .form-control:focus {
+  outline: 0px;
+  border-bottom: 1px dotted #947394;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group .submit {
+  margin: auto;
+  padding: 8px 30px;
+  background-color: transparent;
+  border: 1px blue solid;
+  color: blue;
+  font-size: 1.2em;
+  position: relative;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group .submit:hover {
+  -webkit-box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.452);
+          box-shadow: 0px 0px 5px rgba(0, 0, 255, 0.452);
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group .cancel {
+  margin: auto;
+  margin-left: 20px;
+  padding: 8px 30px;
+  background-color: transparent;
+  border: 1px red solid;
+  color: red;
+  font-size: 1.2em;
+  position: relative;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.course-curriculum-section .course-curriculum-form .contact-form .flex .input-group .cancel:hover {
+  -webkit-box-shadow: 0px 0px 5px red;
+          box-shadow: 0px 0px 5px red;
+}
+
+.form-reset {
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+}
+
+.form-set {
+  -webkit-animation: setEnrollForm 1s forwards;
+          animation: setEnrollForm 1s forwards;
+}
+
+.form-cancel {
+  -webkit-animation: setEnrollFormOut 1s forwards;
+          animation: setEnrollFormOut 1s forwards;
+}
+
+.floating-enroll {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  z-index: 100;
+}
+
+.floating-enroll button {
+  display: block;
+  margin: auto;
+  padding: 8px 10px;
+  background-color: #f1d012;
+  border: 1px #639c07 solid;
+  color: black;
+  font-weight: bold;
+  font-size: 1em;
+  position: relative;
+  -webkit-transition-property: -webkit-box-shadow;
+  transition-property: -webkit-box-shadow;
+  transition-property: box-shadow;
+  transition-property: box-shadow, -webkit-box-shadow;
+  -webkit-transition-duration: 2s;
+          transition-duration: 2s;
+}
+
+.floating-enroll button:hover {
+  -webkit-box-shadow: 0px 0px 5px #639c07;
+          box-shadow: 0px 0px 5px #639c07;
+  -webkit-animation: moveBlock 0.5s;
+          animation: moveBlock 0.5s;
+}
+
+.floating-enroll button::after {
+  content: "\f0a4";
+  font-family: FontAwesome;
+  margin-left: 10px;
+  font-size: 1.2em;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.course-mentor {
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-mentor .mentor {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.course-mentor .mentor img {
+  height: 180px;
+  border-radius: 10%;
+  -webkit-box-shadow: 10px 0px #ff00c8, -10px 0px #ff2c2c;
+          box-shadow: 10px 0px #ff00c8, -10px 0px #ff2c2c;
+}
+
+.course-mentor .mentor .mentor-name {
+  margin: 0px;
+  text-transform: uppercase;
+  font-size: 1em;
+  color: #fdaee3;
+  margin-top: 5px;
+}
+
+.course-mentor .mentor .mentor-designation {
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.course-mentor .mentor .start {
+  margin: 0px;
+}
+
+.course-mentor .mentor .start i {
+  margin: 0px 2px;
+  color: #ffa32b;
+}
+
+@-webkit-keyframes moveBlock {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  75% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes moveBlock {
+  0% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  25% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  50% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  75% {
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+  }
+  100% {
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes setEnrollForm {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes setEnrollForm {
+  0% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes setEnrollFormOut {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  10% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes setEnrollFormOut {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  10% {
+    -webkit-transform: translateX(-10%);
+            transform: translateX(-10%);
+  }
+  100% {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+/*# sourceMappingURL=main.css.map */

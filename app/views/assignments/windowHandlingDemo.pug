@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>First window</title>
+	</head>
+	<body>
+		include ..include/head.pug
+		include ..include/nav.pug
+		<div>
+			<h1>Welcome to Windows demo example</h1>
+			<p>Click on OK button to launch new window
+
+		</div>
+		<div>
+			<button id="btn" onClick=newWindow()>Ok</button>
+		</div>
+		script.
+			function newWindow(){
+				window.open("Second.html")
+			}
+	include ..include/footer.pug		
+</body>
+</html>

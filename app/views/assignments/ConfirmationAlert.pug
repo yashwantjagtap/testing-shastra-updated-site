@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  style.
+
+    .assignment-page{
+      height: 30vh;
+      margin: 100px 200px;
+      text-align: center;
+    }
+    h2{
+      font-size:28px;
+    }
+    .alert-btn{
+      padding: 10px 20px;
+      background: #2d7fc7;
+      border-radius: 30px;
+      color:#ffffff;
+      font-size:18px;
+    }
+    .alert-btn:hover{
+      color:#2d7fc7;
+      background:#fff;
+      border:2px solid #2d7fc7;
+      font-weight:600;
+    }
+    #demo{
+      margin-top:30px;
+      color:#00000 !important;
+      font-weight:bold;
+      font-size:18px;
+    }
+
+
+
+<body>
+
+include ../include/head.pug  
+
+include ../include/nav.pug  
+
+<div class = "assignment-page">
+  h2 JavaScript Confirm Box
+  <button class="alert-btn" onclick="myFunction()">Click Me</button>
+  <p id="demo" ></p>
+</div>
+
+
+include ../include/footer.pug
+
+script.
+  function myFunction() {
+    var txt;
+    if (confirm("Press a button!")) {
+      txt = "You pressed OK!";
+    } else {
+      txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+</body>
+</html>
