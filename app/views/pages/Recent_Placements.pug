@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  include ../include/head.pug
+  include ../include/nav.pug
+  link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css")
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css")
+  link(rel="stylesheet", href="/css/recent.css")  
+
+
+<body>
+  <div class="container">
+    <div class="table-responsive">
+      <h1 align="center">CSV File to HTML Table Using AJAX jQuery</h1>
+      <br />
+      <div align="center">
+        <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
+      </div>
+      <br />
+      <div id="employee_table">
+      </div>
+    </div>
+  </div>
+
+script(src = "js/load-csv-to-html.js")
+include ../include/footer.pug
+
+</body>
+</html>
