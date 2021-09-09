@@ -1,44 +1,69 @@
 <!DOCTYPE html>
 <html lang="en-US">
   include ./include/head.pug
-  <body class="home page-template page-template-template-home page-template-template-home-php page page-id-11 wp-custom-logo">
     <div id="page" class="site">
       <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+    include ./include/nav.pug
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
       <header id="masthead" class="site-header" role="banner">
         <!-- Site Logo -->
-        include ./include/nav.pug
         <!-- #site-navigation -->
 
         <div id="header_slider_wrap">
           <ul class="header_slider">
-            <li class="slider_content_loop">
-              <img width="1878" height="874" src="education-banner1-1878x874.jpg" class="attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
-              <div class="slider_capation">
-                <div class="ak-container">
-                  <div class="slider_title_desc">
-                    <div class="slider_title wow fadeInUp"> Pune's rapidly growing training institue</div>
-                    <div class="slider_content wow fadeInUp">
-                      <p>Come join us for the better future tomorrow.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+            <li class="webinar-slider slider_content_loop">
+              <img width="1878" height="874" src="images/background/webinar-bg.png" class="webinar-image attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
+                .container
+                  .row
+                    .col-8.bg-absolute-left
+                      .webinar-info
+                        h3.live-seminar live Webinar on 
+                        h1.seminar-topic selenium
+                        p.webinar-text This LIVE Webinar explains different career opportunities in the ever chaning world of Automation Testing and role of Selenium WebDriver as a career builder. Do not miss this opportunity.
+                      .date-and-time
+                        span.date
+                          <i class="fa fa-calendar" aria-hidden="true"></i><span>24 th sept 2021</span>
+                        span.time    
+                          <i class="fa fa-clock-o" aria-hidden="true"></i><span>4pm to 6pm</span>
+                      .register
+                        <button class ="register-here"><a href="form.html"target="blank"> register here</a></button> 
+                    .col-4.bg-absolute-right  
+                      .hexagon
+                        //- .hexagon-inner
+                        img(src="images/background/avinash.png")
+                      .webinar-conductor-name
+                        h3.name mr.avinash pingale
+                        p.text sr. Automation text engineer and founder at testing shastra 
             </li>
-            <li class="slider_content_loop">
-              <img  width="1878" height="874" src="education-banner2-1878x874.jpg" class="attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
-              <div class="slider_capation">
-                <div class="ak-container">
-                  <div class="slider_title_desc">
-                    <div class="slider_title wow fadeInUp">
-                      Be industry ready with our different Hands-on courses
-                    </div>
-                    <div class="slider_content wow fadeInUp">
-                      <p>Come join us for the better future tomorrow.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+            //- <li class="slider_content_loop li-back-drop">
+            //-   <img width="1878" height="874" src="education-banner1-1878x874.jpg" class="attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
+            //-   <div class="slider_capation">
+            //-     <div class="ak-container">
+            //-       <div class="slider_title_desc">
+            //-         <div class="slider_title wow fadeInUp"> Pune's rapidly growing training institue</div>
+            //-         <div class="slider_content wow fadeInUp">
+            //-           <p>Come join us for the better future tomorrow.</p>
+            //-         </div>
+            //-       </div>
+            //-     </div>
+            //-   </div>
+            //- </li>
+            //- <li class="slider_content_loop li-back-drop">
+            //-   <img  width="1878" height="874" src="education-banner2-1878x874.jpg" class="attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
+            //-   <div class="slider_capation">
+            //-     <div class="ak-container">
+            //-       <div class="slider_title_desc">
+            //-         <div class="slider_title wow fadeInUp">
+            //-           Be industry ready with our different Hands-on courses
+            //-         </div>
+            //-         <div class="slider_content wow fadeInUp">
+            //-           <p>Come join us for the better future tomorrow.</p>
+            //-         </div>
+            //-       </div>
+            //-     </div>
+            //-   </div>
+            //- </li>
           </ul>
         </div>
       </header>
@@ -157,7 +182,7 @@
                         <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-5/" >C/C++</a >
                       </span>
                     </div>
-                    
+
                     <a href="#" id="button" class="button">Enquire Now</a>
                   </div>
                 </div>
@@ -197,7 +222,7 @@
                         <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-2/" >DevOps</a >
                       </span>
                     </div>
-                    
+
                     <a href="#" id="button" class="button">Enquire Now</a>
                   </div>
                 </div>
@@ -479,7 +504,7 @@
                   <span class="title_test">Testimonial</span>
                   <div class="faq_cat_wrap">
                     <ul class="test_loop_wrap">
-                      
+
                       <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fakshaymahalle%2Fposts%2F1848116731950317&width=500" width="500" height="237" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                       <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fyogita.chaudhari.3979%2Fposts%2F1876406952449627&width=500" width="500" height="256" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
                       <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fvarsha.pawar.583%2Fposts%2F1903270143100445&width=500" width="500" height="256" style="border: none; overflow: hidden" scrolling="no" frameborder="0" allowTransparency="true" allow="encrypted-media"></iframe>
@@ -537,10 +562,13 @@
           </div>
         </section>
       </div>
-  
+
       include ./include/footer.pug
       <!-- #colophon -->
     </div>
     <!-- #page -->
+    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN", crossorigin="anonymous")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q", crossorigin="anonymous")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl", crossorigin="anonymous")
   </body>
 </html>

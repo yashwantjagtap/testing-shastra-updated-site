@@ -1,10 +1,18 @@
 @charset "UTF-8";
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   list-style: none;
+}
+
+body {
+  border-top: 5px solid #333333;
 }
 
 a {
@@ -23,6 +31,14 @@ ul {
 
 i {
   margin-right: 4px;
+}
+
+.main-navigation.center {
+  text-align: center;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 5555;
 }
 
 .mentor-section {
@@ -102,7 +118,7 @@ i {
 
 .key-feature {
   position: absolute;
-  width: inherit;
+  min-width: inherit;
   top: 85%;
   left: 9%;
   right: 9%;
@@ -155,19 +171,24 @@ i {
 
 .key-feature .key-flex {
   padding: 1em 0em;
-  -webkit-column-count: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
-.key-feature .key-flex :nth-child(1),
-.key-feature .key-flex :nth-child(2),
 .key-feature .key-flex :nth-child(3),
-.key-feature .key-flex :nth-child(4),
-.key-feature .key-flex :nth-child(5),
-.key-feature .key-flex :nth-child(6) {
-  border-right: 2px solid rgba(182, 182, 182, 0.774);
+.key-feature .key-flex :nth-child(6),
+.key-feature .key-flex :nth-child(9) {
+  border: none;
 }
 
 .key-feature .key-flex li {
+  -webkit-box-flex: 33.33%;
+      -ms-flex: 33.33%;
+          flex: 33.33%;
+  border-right: 2px solid rgba(182, 182, 182, 0.774);
   text-align: center;
   font-size: 14px;
   font-weight: 600;
@@ -214,14 +235,21 @@ i {
 .course-detail .left-body .available-section .specification-list,
 .course-detail .left-body .course-benefits .specification-list,
 .course-detail .left-body .Syllabus-section .specification-list {
-  -webkit-column-count: 2;
   padding: 1.5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .course-detail .left-body .course-info .specification-list li,
 .course-detail .left-body .available-section .specification-list li,
 .course-detail .left-body .course-benefits .specification-list li,
 .course-detail .left-body .Syllabus-section .specification-list li {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
   padding: 0.5em;
   font-size: 14px;
   line-height: 22px;
@@ -822,5 +850,19 @@ i {
 .course-detail .right-body .student-review .review-section .student-rating i {
   color: #f7be13;
   font-size: 14px;
+}
+
+#myBtn {
+  /*  display: none;*/
+  position: fixed;
+  bottom: 20px;
+  right: 24px;
+  z-index: 99;
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(64.5deg, #f574b9 14.7%, #5961df 88.7%);
+  padding: 10px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 /*# sourceMappingURL=updated.css.map */
