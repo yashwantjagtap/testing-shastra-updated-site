@@ -5,30 +5,80 @@
       <a class="skip-link screen-reader-text" href="#main">Skip to content</a>
     include ./include/nav.pug
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-       
+
       <header id="masthead" class="site-header" role="banner">
         <!-- Site Logo -->
         <!-- #site-navigation -->
-        //- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Register Here</button>
-        //- <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        //-   <div class="modal-dialog modal-dialog-centered" role="document">
-        //-     <div class="modal-content">
-        //-       <div class="modal-header">
-        //-         <h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5>
-        //-         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-        //-           <span aria-hidden="true">&times;</span>
-        //-         </button>
-        //-       </div>
-        //-       <div class="modal-body">
-                
-        //-       </div>
-        //-       <div class="modal-footer">
-        //-         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        //-         <button type="button" class="btn btn-primary">Save changes</button>
-        //-       </div>
-        //-     </div>
-        //-   </div>
-        //- </div> 
+        //- <button type="button" class="btn btn-primary" id="webinarSubmit" data-toggle="modal" data-target="#exampleModalCenter">Register Here</button>
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content registration-modal-content">
+              //- <div class="modal-header">
+              //-   //- <h5 class="modal-title Register-modal-title" id="exampleModalLongTitle">Register Here for free webinar</h5>
+              //-   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              //-     <span aria-hidden="true">&times;</span>
+              //-   </button>
+              //- </div>
+              <div class="modal-body registration-modal-body">
+                .registration-modal-left-body
+                  img(src="")
+                  .modal-course-benefit-list
+                    .modal-course-benefit
+                      .course-logo-img  
+                        img 
+                      .course-info  
+                        h5 100% Job Guaranteed 
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .modal-course-benefit
+                      .course-logo-img  
+                        img 
+                      .course-info  
+                        h5 100% Job Guaranteed 
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    .modal-course-benefit
+                      .course-logo-img  
+                        img 
+                      .course-info  
+                        h5 100% Job Guaranteed 
+                        p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.        
+                .registration-modal-right-body 
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                  </button> 
+                  .modal-right-body-header  
+                    h6 Register Here
+                  .modal-form-body
+                    form#webinarForm 
+                      fieldset 
+                        div.input-fieldset-reg
+                          label(for="") first name 
+                          input(type="text" name="candidateFName")
+                        div.input-fieldset-reg
+                          label(for="") last name
+                          input(type="text" name="candidateLName")
+                        div.input-fieldset-reg
+                          label(for="") phone number
+                          input(type="number" name="candidateMobileNo")
+                        div.input-fieldset-reg
+                          label(for="") email id 
+                          input(type="email" name="candidateEmailId")
+                        div.input-fieldset-reg
+                          label(for="") institute name
+                          input(type="text" name="candidateInstituteName")
+                        div.input-fieldset-reg
+                          label(for="") last year percentage
+                          input(type="number", name="candidatePercentage")
+                        div
+                          button#webinarRegistration Submit
+                          button(type="reset") reset               
+              </div>
+                //- <div class="modal-footer">
+                //-   <button type="button" class="btn btn-secondary button-updated " data-dismiss="modal">Close</button>
+                //-   <button type="button" class="btn btn-primary button-updated">Save changes</button>
+                //- </div>
+            </div>
+          </div>
+        </div> 
         <div id="header_slider_wrap">
           <ul class="header_slider">
             <li class="webinar-slider slider_content_loop">
@@ -39,14 +89,14 @@
                       .webinar-info
                         h3.live-seminar live Webinar on 
                         h1.seminar-topic selenium
-                        p.webinar-text This LIVE Webinar explains different career opportunities in the ever chaning world of Automation Testing and role of Selenium WebDriver as a career builder. Do not miss this opportunity.
+                        p.webinar-text This LIVE Webinar explains different career opportunities in the ever changing world of Automation Testing and role of Selenium WebDriver as a career builder. Do not miss this opportunity.
                       .date-and-time
                         span.date
                           <i class="fa fa-calendar" aria-hidden="true"></i><span>24 th sept 2021</span>
                         span.time    
                           <i class="fa fa-clock-o" aria-hidden="true"></i><span>4pm to 6pm</span>
                       .register
-                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Register Here</button>             
+                        <button type="button" class="btn btn-primary" id="registerModal" data-toggle="modal" data-target="#exampleModalCenter">Register Here</button>             
                     .col-4.bg-absolute-right  
                       .hexagon
                         //- .hexagon-inner
@@ -118,6 +168,16 @@
             </div>
           </div>
         </section>
+        section
+          .webinar-add
+            .container
+              .row
+                .col-12
+                  .webinar-fixed-Add
+                    p join our live webinar on 24 th sept 2021
+                    <button type="button" class=" button-updated" id="webinarSubmit" data-toggle="modal" data-target="#exampleModalCenter">Register Here</button>
+
+
         <section class="home_section" id="section_portfolio">
           <div class="bg_portfolio clearfix">
             <div class="ak-container">
@@ -131,23 +191,23 @@
               <div class="portfolio_slider_wrap owl-carousel">
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-9/" >
+                    <a href="#" >
                       <img src="images/java-fullstack.png" />
                     </a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-9/" >Java Full Stack Developer</a >
+                        <a href="#" >Java Full Stack Developer</a >
                       </span>
                     </div>
                     <!--<div class="port_content_wrap wow fadeInUp">A deep, detailed and profound course which will provide you the walkthough of Core Java and Advance Java. Course guarantees to cover SCJP syllabus</div>-->
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-8/" >
+                    <a href="#" >
                       <img src="images/java-selenium.png" />
                     </a>
                   </div>
@@ -157,104 +217,106 @@
                         <a href="#">Automation Testing-Java</a>
                       </span>
                     </div>
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
 
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-6/">
+                    <a href="#">
                       <img src="images/Python-Selenium.png"/></a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-6/">Automation Testing-Python</a>
+                        <a href="#">Automation Testing-Python</a>
                       </span>
                     </div>
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-7/">
-                      <img src="images/angular.png"/>
+                    <a href="../pages/mern.pug">
+                      <img src="images/MERN-Stack-Development.jpg"/>
                     </a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-7/" >Angular JS 3/4</a>
+                        <a href="#">MERN Stack Development</a>
                       </span>
                     </div>
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-5/" ><img src="images/C.jpg" /></a>
+                    <a href="">
+                    <img src="images/UI-Development.jpg"/></a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-5/" >C/C++</a >
+                        <a href="">UI Development</a >
                       </span>
                     </div>
 
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-4/"><img src="images/Mobile_Testing.jpg"/></a>
+                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-4/">
+                    <img src="images/REST-API.png"/></a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-4/" >Mobile Testing</a >
+                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-4/" >REST API Testing</a >
                       </span>
                     </div>
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
+                //- <div class="portfolio_slide_loop wow fadeInUp">
+                //-   <div class="image_wrap_port wow fadeInUp">
+                //-     <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-3/" ><img src="images/WebService.jpg" /></a>
+                //-   </div>
+                //-   <div class="title_content_wrap">
+                //-     <div class="anchor_title_wrap">
+                //-       <span class="port_title wow fadeInUp">
+                //-         <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-3/" >WebService Testing</a >
+                //-       </span>
+                //-     </div>
+                //-     <a href="#" id="button" class="button">Enquire Now</a>
+                //-   </div>
+                //- </div>
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-3/" ><img src="images/WebService.jpg" /></a>
+                    <a href=""><img src="images/DevOps.jpg" /></a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-3/" >WebService Testing</a >
-                      </span>
-                    </div>
-                    <a href="#" id="button" class="button">Enquire Now</a>
-                  </div>
-                </div>
-                <div class="portfolio_slide_loop wow fadeInUp">
-                  <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-2/" ><img src="images/DevOps.jpg" /></a>
-                  </div>
-                  <div class="title_content_wrap">
-                    <div class="anchor_title_wrap">
-                      <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat-2/" >DevOps</a >
+                        <a href="">Azure DevOps</a >
                       </span>
                     </div>
 
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
                 <div class="portfolio_slide_loop wow fadeInUp">
                   <div class="image_wrap_port wow fadeInUp">
-                    <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat/" ><img src="images/Manual.jpg" /></a>
+                    <a href="" ><img src="images/Manual.jpg" /></a>
                   </div>
                   <div class="title_content_wrap">
                     <div class="anchor_title_wrap">
                       <span class="port_title wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-except-sint-occaecat/" >Manual Testing</a >
+                        <a href="#" >Manual Testing</a >
                       </span>
                     </div>
-                    <a href="#" id="button" class="button">Enquire Now</a>
+                    <a href="#" id="button" class="button-updated">Enquire Now</a>
                   </div>
                 </div>
               </div>
@@ -277,9 +339,9 @@
                 <div class="array_service">
                   <div class="content_wrap">
                     <div class="image_title">
-                      <span class="service_title wow fadeInUp"><a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-5/">Hands-On Course</a></span>
+                      <span class="service_title wow fadeInUp"><a href="#">Hands-On Course</a></span>
                       <div class="service_image wow fadeInUp">
-                        <a href="https://demo.accesspressthemes.com/enlighten/agiat-nulla-pariatur-5/">
+                        <a href="#">
                           <img src="https://demo.accesspressthemes.com/enlighten/wp-content/uploads/2016/05/2016-06-02-7-49x46.png"/>
                         </a>
                       </div>

@@ -504,8 +504,8 @@ a:hover, a:active {
 	top: 0;
 }
 .main-navigation ul ul a {
-	width: 200px;
-	font-size: 13px;
+	width: 250px;
+	font-size: 12px;
 	padding: 10px 25px;
 }
 .main-navigation ul ul li {
@@ -1007,7 +1007,7 @@ margin: 0;
 	text-align: center;
 	position: sticky;
 	top: 0;
-	z-index: 5555444444;
+	z-index: 99999;
 }
 .main-navigation.center.top .menu ul li {
 	float: none;
@@ -1286,6 +1286,7 @@ display:block;
 }
 .portfolio_slider_wrap .portfolio_slide_loop{
 	border:1px solid #d9d9d9;
+	border-radius: 10px;
 }
 .portfolio_slider_wrap .title_content_wrap{
 	padding:20px;
@@ -3621,11 +3622,32 @@ ul#follow_us_contacts li a:hover i {
 	padding-right:45px;
 }
 /*************************************************************************************/
+.button-updated {
+    display: inline-block !important;
+    color: #fff !important;
+    padding: 5px 20px !important;
+    border-radius: 50px !important;
+    background-color: #2d7fc7 !important;
+	border: 1px solid transparent !important;
+	box-shadow: none !important;
+	transition: 0.1s ;
+}
+.button-updated:hover{
+	background-color: #fff !important;
+	border: 1px solid #2d7fc7 !important;
+	color: #2d7fc7 !important;
+}
+.button-updated:focus{
+	outline: 0 !important;
+	box-shadow: none !important;
+
+}
+/* *******   ************** */
 
 .hexagon{
 	height: 360px;
 	width: 360px;
-	background-color: #f3f3f3;
+	background-color: #2d7fc7;
 	clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
 	transform:rotate(90deg);
 }
@@ -3639,7 +3661,7 @@ ul#follow_us_contacts li a:hover i {
 	bottom :50px;
 	height: 350px;
 	width: 350px;
-	background-color: #2d7fc7;
+	background-color: #f3f3f3;
 	clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
 }
 
@@ -3648,7 +3670,6 @@ ul#follow_us_contacts li a:hover i {
 }
 .bx-wrapper img {
     max-width: 100%;
-    display: block;
 }
 .hexagon img {
     height: 300px;
@@ -3658,6 +3679,65 @@ ul#follow_us_contacts li a:hover i {
     top: 44px;
     left: 13px;
     transform: rotate(-90deg);
+}
+/***************************************webinar-add ************************************/
+
+.webinar-add{
+	background-color: #000;
+	height: 50px;
+	color: #fff;
+	padding: 5px 0 0 0 ;
+	position: fixed;
+	bottom: 0%;
+	z-index: 9999999;
+	width: 100%;
+}
+.webinar-fixed-Add p{
+	font-size: 15px;
+	margin: 10px 0px;
+	text-transform: uppercase;
+}
+
+.webinar-add .register-here{
+	border-radius: 50px;
+	color: #fff;
+	background-color: #2d7fc7;
+	margin: 10px 0px 10px auto;
+	outline: none;
+	border: 0px;
+	box-shadow: none;
+	text-align: center;
+	padding: 5px 20px;
+}
+.webinar-fixed-Add{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+/*************************************** registration from modal************************************/
+.modal{
+	z-index: 99999999999999999999999999 !important;
+}
+.modal-header,.modal-footer{
+	border: 0px !important;
+}
+.registration-modal-content,.registration-modal-body{
+	background-color: rgb(255, 255, 255) !important;
+	display: flex !important; 
+	justify-content: space-between !important;
+	align-items: center !important;
+	padding: 0 !important;
+}
+.modal-course-benefit{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.registration-modal-left-body{
+	background-color: #fff;
+}
+.registration-modal-right-body{
+	background-color: #2d7fc7;
 }
 
 /*********************************** new added footer *********************/
@@ -3726,7 +3806,6 @@ ul#follow_us_contacts li a:hover i {
   .main-footer .footer-social-link .footer-social-media span a img {
 	height: 60px;
 	width: 220px;
-	margin: 0px 20px;
   }
   .main-footer .footer-course ul,.main-footer .footer-contact ul{
 	  margin: 0;
@@ -3756,4 +3835,5 @@ ul#follow_us_contacts li a:hover i {
 	height: 1px;
 	margin-top: 30px;
 }
-  
+ 
+

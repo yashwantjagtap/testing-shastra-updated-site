@@ -3,3 +3,36 @@
     padding: 0;
     box-sizing: border-box;
 }
+.div-header{
+    background-color: #0b2e4d;
+    margin: 20px auto;
+    text-align: center;
+    &:hover{
+        background-color: #2d7fc7;
+    }
+    h4{
+        color: #fff;
+        font-size: 15px;
+        padding: 10px 20px;
+        margin: 0;
+    }
+}
+.table,tr,td{
+    text-align: center;
+}
+tbody{
+    tr:nth-child(even){
+        background-color: #f3f3f3 !important;
+    }
+    td:last-child{
+        font-weight: bold;
+    }
+}
+
+.thead-blue{
+    color: #fff;
+    background-color: #2d7fc7;
+}
+.pagination{
+    margin-left: 0;
+}
