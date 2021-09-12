@@ -2,18 +2,36 @@
 <html>
 <head>
 	<title>Parent window</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	style.
+		.iframe{
+			padding:50px 0px;
+		}
+
+
 </head>
 <body>
-	<h1>Frames Handling Demo</h1>
-	<p>
-		To solve this assignment, first enter username and then enter password. After entering a password, click on 'Login' button. When you will click on login button, you will see a Congratulations message. Print that message on console
-	</p>
-	<div>
-		<iframe name="first-frame" style="border:none;" height="100px" width="400px" id="farme-1" src="TextBxContainer.html"></iframe>
-	</div>
-	<div>
-		<iframe name="second-frame" style="border:none;" height="100px" id="farme-2" src="ButtonContainer.html"></iframe>
-	</div>
+	include ../include/head.pug  
 
+	include ../include/nav.pug  
+	.container
+		.row
+			.col-12.iframe
+				.frame_1
+					<h1>Frames Handling Demo</h1>
+					<p>
+						To solve this assignment, first enter username and then enter password. After entering a password, click on 'Login' button. When you will click on login button, you will see a Congratulations message. Print that message on console
+					</p>
+					<div>
+						<iframe name="first-frame" style="border:none;" height="200px" width="400px" id="farme-1" src="TextBxContainer.html"></iframe>
+					</div>
+				.frame_2
+					<div>
+						<iframe name="second-frame" style="border:none;" height="150px" id="farme-2" src="ButtonContainer.html"></iframe>
+					</div>
+	include ../include/footer.pug
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
 </html>

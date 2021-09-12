@@ -1,23 +1,57 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>First window</title>
-	</head>
-	<body>
-		include ..include/head.pug
-		include ..include/nav.pug
-		<div>
-			<h1>Welcome to Windows demo example</h1>
-			<p>Click on OK button to launch new window
+<html lang="en-US">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 
-		</div>
-		<div>
-			<button id="btn" onClick=newWindow()>Ok</button>
-		</div>
-		script.
-			function newWindow(){
-				window.open("Second.html")
-			}
-	include ..include/footer.pug		
+	style.
+
+		.assignment-page{
+			height: 30vh;
+			margin: 100px 200px;
+			text-align: center;
+		}
+		h2{
+			font-size:28px;
+		}
+		.alert-btn{
+			padding: 10px 20px;
+			background: #2d7fc7;
+			border-radius: 30px;
+			color:#ffffff;
+			font-size:18px;
+		}
+		.alert-btn:hover{
+			color:#2d7fc7;
+			background:#fff;
+			border:2px solid #2d7fc7;
+			font-weight:600;
+		}
+		#demo{
+			margin-top:30px;
+			color:#00000 !important;
+			font-weight:bold;
+			font-size:18px;
+		}
+
+
+
+<body>
+
+include ../include/head.pug  
+
+include ../include/nav.pug  
+
+<div class = "assignment-page">
+	h2 window Handling Demo
+	<button class="alert-btn" onclick="newWindow()">Click Me</button>
+	<p id="demo" ></p>
+</div>
+
+
+include ../include/footer.pug
+
+script.
+	function newWindow(){
+		window.open("Second.html")
+	}
 </body>
 </html>

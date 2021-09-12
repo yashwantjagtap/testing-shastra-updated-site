@@ -1,5 +1,44 @@
 <!DOCTYPE html>
-<html lang="en-US"><head>
+<html>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+  .assignment-page{
+  height: 20vh;
+  margin: 100px 200px;
+  text-align: center;
+  background:#00000 !important;
+  
+  }
+  h2{
+  font-size:28px;
+  }
+  .alert-btn{
+  padding: 5px 20px;
+  background: #2d7fc7;
+  border-radius: 30px;
+  color:#ffffff;
+  font-size:18px;
+  }
+  .alert-btn:hover{
+    color:#2d7fc7;
+    background:#fff;
+    border:2px solid #2d7fc7;
+    font-weight:600;  
+  }
+  #demo{
+    margin-top:30px;
+    color:#00000 !important;
+    font-weight:bold;
+    font-size:18px;
+  }
+  label{
+    font-weight:bold;
+    font-size:18px;
+  }
+  #user{
+    color:#00000 !important;
+  }
+</style><body><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
@@ -37,163 +76,7 @@
 <link rel="icon" href="/images/Favicon.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />
 <meta name="msapplication-TileImage" content="/images/Favicon.png" />
-</head><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<body class="page-template-default page page-id-242 wp-custom-logo">
-<style>
-  .header-banner-container {
-  	background-color: #2d7fc7;
-  	background-repeat: no-repeat;
-  }
-  
-  .title_two,
-  .portfolio_slider_wrap .anchor_title_wrap a:hover,
-  #section_achieve .bg_achieve .wrap_counter .counter_count,
-  #section_faq_testimonial .faq_wrap .faq_title,
-  #section_faq_testimonial .test_wrap .title_test,
-  #section_cta .button_cta a:hover,
-  .entry-footer a:hover,
-  .entry-footer a:focus,
-  .entry-footer a:active,
-  ul#follow_us_contacts li a:hover i,
-  .rn_title a:hover,
-  .woocommerce ul.products li.product .price,
-  .woocommerce div.product p.price,
-  .woocommerce div.product span.price {
-  	color: #2D7FC7;
-  }
-  
-  .widget ul li:hover:after,
-  .widget ul li a:hover,
-  #secondary .footer_RN_wrap .tn_title a:hover,
-  #primary .entry-title a:hover,
-  .contact-info-wrap ul li a:hover {
-  	color: rgba(45, 127, 199, 0.8);
-  }
-  
-  .main-navigation,
-  .main-navigation.top ul ul,
-  #section_service .service_slider.owl-carousel,
-  .wrap_video .video_wrap .play-pause-video,
-  #section_cta,
-  .recent_news .rn_title_content .ln_date,
-  #section_news_twitter_message .twitter_wrap,
-  .faq_dot:before,
-  .main-navigation ul ul.sub-menu>li>a,
-  .search-form:before,
-  #secondary h2.widget-title:before,
-  .nav-links a,
-  .contact-form-wrap form input[type="submit"],
-  .woocommerce span.onsale,
-  .woocommerce #respond input#submit,
-  .woocommerce #respond input#submit.alt,
-  .woocommerce a.button.alt,
-  .woocommerce button.button.alt,
-  .woocommerce input.button.alt,
-  .woocommerce-account .woocommerce-MyAccount-navigation ul {
-  	background: #2D7FC7;
-  }
-  
-  .service_slider .content_wrap .title_content_service {
-  	color: #d5e5f4;
-  }
-  
-  .service_slider.owl-carousel .owl-controls .owl-nav div {
-  	color: #d5e5f4;
-  }
-  
-  .service_slider .content_wrap:after {
-  	background: #abcce9;
-  }
-  
-  .service_slider.owl-carousel:before,
-  #section_cta .title_section_cta,
-  .twitter_wrap .aptf-single-tweet-wrapper {
-  	border-color: #abcce9;
-  }
-  
-  #section_news_twitter_message .recent_news .rn_content_loop .rn_image,
-  .contact-form-wrap form input[type="submit"]:hover,
-  #section_news_twitter_message .recent_news .rn_content_loop .rn_image:hover span,
-  .woocommerce #respond input#submit.alt:hover,
-  .woocommerce a.button.alt:hover,
-  .woocommerce button.button.alt:hover,
-  .woocommerce input.button.alt:hover {
-  	background: rgba(45, 127, 199, 0.65);
-  }
-  
-  .main-navigation ul ul li,
-  .main-navigation ul ul ul li {
-  	background: rgba(45, 127, 199, 0.8);
-  }
-  
-  .portfolio_slider_wrap.owl-carousel .owl-controls .owl-dot.active span,
-  .portfolio_slider_wrap.owl-carousel .owl-controls .owl-dot span:hover,
-  #section_faq_testimonial .faq_cat_wrap .bx-wrapper .bx-pager.bx-default-pager a:hover,
-  #section_faq_testimonial .faq_cat_wrap .bx-wrapper .bx-pager.bx-default-pager a.active,
-  #secondary .search-form .search-submit,
-  #primary .error-404.not-found .search-form .search-submit,
-  .not-found .search-form .search-submit,
-  .site-footer .widget_search .search-submit,
-  ul#follow_us_contacts li a:hover i {
-  	border-color: #2D7FC7;
-  }
-  
-  .woocommerce-account .woocommerce-MyAccount-navigation ul li {
-  	border-color: #abcce9
-  }
-  
-  #section_news_slide,
-  #section_faq_testimonial .test_faq_wrap .faq_question.expanded .plus_minus_wrap,
-  #section_faq_testimonial .test_faq_wrap .faq_question.expanded .plus_minus_wrap:before,
-  #section_news_twitter_message .recent_news .rn_title,
-  #section_news_twitter_message .messag_wrap .rn_title {
-  	background: #2D7FC7;
-  }
-  
-  body,
-  body p {
-  	font-family: Lato;
-  }
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-  	font-family: Titillium Web;
-  }
-  
-  .main-navigation a {
-  	font-family: Open Sans;
-  }
-  .assignment-list >ul{
-  	margin-top:30px;
-  }			
-  .assignment-list >ul>li {
-  	margin-top:10px;
-  	font-size:15px;
-  }
-  .assignment-list> ul>li>a:hover{
-  	color:#000000;	
-  }	
-  .header-banner-container:after{
-  	background:#f3f3f3;
-  }
-  .outer-div{
-  	background:#ffffff;
-  	width:100%;
-  	padding:30px;
-  	box-shadow:0px 0px 5px #c3c3c39a;
-  	border-radius:5px;
-  }
-  #ul-style{
-  	color:#000;
-  }
-  
-</style><div id="page" class="site">
-<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
-<header id="masthead" class="site-header" role="banner"><div class="ak-container">
+</head><div class="ak-container">
 <div class="social_htext_wrap">
 <div class="header_text">
 <span class="text_wrap">Join with us and be a part of the success</span>
@@ -316,27 +199,12 @@
 </ul>
 </div>
 </div>
-</nav></header><!-- #masthead -->
-<div class="header-banner-container">
-<div class="ak-container">
-<div class="page-title-wrap">
-<div class="outer-div">
-<h1 class="page-title" style="color:#000">Assignments</h1>
-<div id="enlighten-breadcrumb" style="color:#000"><a href="/" style="color:#000">Home</a> &gt; <span class="current">Assignments</span></div>
-<div class="assignment-list" >
-<ul type="disc" id="ul-style">	
-<li><a  href="/assignments/confirmation-alert">confirmation alert</a></li>
-<li><a  href="/assignments/prompt"> prompt alert</a></li>
-<li><a  href="/assignments/simple-alert"> simple alert</a></li>
-<li><a  href="/assignments/windowHandlingDemo">Window Handling Demo</a></li>
-<li><a  href="/assignments/parent-window">Frame Handling Demo</a></li>
-<li><a  href="/assignments/drag-and-drop">Drag And Drop Assignment</a></li>	
-<li><a  href="/assignments/drop-down">DropDown List Assignment</a></li>
-<li><a  href="/assignments/Tooltip">ToolTip Assignment</a></li>
-</ul>
-</div>
-</div>	
-</div>	
+</nav><div class="assignment-page">
+<h2>Click the button to display an alert boxs.</h2>
+<label>Your Name:</label>
+<input id="user" name="YourName" />
+<div class="click-me" style = margin:30px>
+<button class="alert-btn" onclick="myFunction()">Click Me</button>
 </div>
 </div>
 <footer>
@@ -376,15 +244,14 @@
             <ul>
               <li><i class="fa fa-map-marker" aria-hidden="true"></i> Vidya Nagar, New Sangvi, Pune</li>
               <li><i class="fa fa-phone" aria-hidden="true"></i> +91-9130502135</li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@testingshastra.com</div><!-- #page -->
-<link rel='stylesheet' id='enlighten-lite-dynamic-fonts-css' href='https://fonts.googleapis.com/css?family=Lato%7CTitillium+Web%7COpen+Sans&#038;ver=4.9.8' type='text/css' media='all' />
-<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.3'></script>
-<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/navigation.js?ver=20151215'></script>
-<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/skip-link-focus-fix.js?ver=20151215'></script>
-<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+              <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@testingshastra.com
+                <script>
+                  function myFunction() {
+                    var name=document.getElementById("user").value;
+                    alert("Hello "+name+"\nWelcome to Testing Shastra!");
+                  }
+                  
+                </script></body>
               </li>
             </ul>
           </div>
@@ -393,5 +260,4 @@
       <div class="footer-bottom-line"></div>
     </div>
   </div>
-</footer></body>
-</html>
+</footer></html>

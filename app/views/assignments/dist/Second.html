@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Second Window</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+<div>
+<h2>Welcome to second window</h2>	
+<p>Click on Close button</p>
+</div>
+<div>
+<button id="close-btn" onClick=congratulations()>Close</button>
+</div>
+<script>
+  function congratulations(){
+  	var newElement = document.createElement("p");
+  newElement.textContent = "Congratulation ! You have scucessfully completed the assignment.";
+  document.body.appendChild(newElement);
+  initialised = true; 
+  }
+  
+</script></body>
+</html>

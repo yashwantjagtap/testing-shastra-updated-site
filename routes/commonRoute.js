@@ -21,7 +21,7 @@ router.get("/Recent_Placements", function (req, res, next) {
   });
 });
 
-router.get("/assignments/:ass_name", function (req, res, next) {
+router.get("/assignments/java-selenium-assignment/:ass_name", function (req, res, next) {
   var data = req.params.ass_name;
   switch (data) {
     case "confirmation-alert":
@@ -46,12 +46,6 @@ router.get("/assignments/:ass_name", function (req, res, next) {
         title: "Testing Shastra Assignments | windowHandlingDemo",
       });
       break;
-    case "":
-      res.render("assignments/", {
-        title: "Testing Shastra Assignments | ",
-      });
-      break;
-
     case "parent-window":
       res.render("assignments/ParentWindow", {
         title: "Testing Shastra Assignments | ParentWindow",
