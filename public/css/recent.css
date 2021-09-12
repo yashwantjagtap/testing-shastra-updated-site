@@ -6,13 +6,13 @@
 }
 
 .div-header {
-  background-color: #0b2e4d;
+  background-color: #2d7fc7;
   margin: 20px auto;
   text-align: center;
 }
 
 .div-header:hover {
-  background-color: #2d7fc7;
+  background-color: #0d67b6;
 }
 
 .div-header h4 {
@@ -28,6 +28,12 @@
 
 tbody tr:nth-child(even) {
   background-color: #f3f3f3 !important;
+}
+
+tbody tr:hover {
+  background-color: #111 !important;
+  color: #fff !important;
+  cursor: pointer;
 }
 
 tbody td:last-child {
