@@ -30,7 +30,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-  background-color: #111 !important;
+  background-color: #51a7e9 !important;
   color: #fff !important;
   cursor: pointer;
 }
