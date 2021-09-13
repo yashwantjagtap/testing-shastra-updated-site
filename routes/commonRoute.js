@@ -1,5 +1,6 @@
 var router = require("express").Router();
-
+var middleware = require("./middleware");
+var IndexModel = require("../app/model/IndexModel");
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Testing Shastra | Training | Placement" });
@@ -17,7 +18,7 @@ router.get("/contact-us", function (req, res, next) {
   });
 });
 
-router.get("/Recent_Placements", function (req, res, next) {
+router.get("/recent-placements", function (req, res, next) {
   res.render("pages/Recent_Placements", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address",
   });
@@ -104,6 +105,18 @@ router.get("/course/rest-api-developer", function (req, res, next) {
   });
 });
 
-
-0.
+router.post(
+  "/save-webinar-candidate",
+  middleware.checkForPoolConnection,
+  function (req, res) {
+    var data = req.body;
+    IndexModel.addNewStudent(res.pool, data)
+      .then(function (result) {
+        res.status(200).send({ call: 1 });
+      })
+      .catch((error) => {
+        res.status(500).send({ call: 0, error });
+      });
+  }
+);
 module.exports = router;
