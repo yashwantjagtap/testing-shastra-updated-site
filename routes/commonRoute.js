@@ -10,18 +10,20 @@ router.get("/assignments", function (req, res, next) {
     title: "Testing Shastra | Programs | Assignment",
   });
 });
+
 router.get("/contact-us", function (req, res, next) {
   res.render("pages/contact_us", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address",
   });
 });
+
 router.get("/Recent_Placements", function (req, res, next) {
   res.render("pages/Recent_Placements", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address",
   });
 });
 
-router.get("/assignments/java-selenium-assignment/:ass_name", function (req, res, next) {
+router.get("/assignments/:ass_name", function (req, res, next) {
   var data = req.params.ass_name;
   switch (data) {
     case "confirmation-alert":
