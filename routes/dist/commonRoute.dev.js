@@ -111,6 +111,11 @@ router.get("/course/rest-api-developer", function (req, res, next) {
     title: "Testing Shastra | Contact Us | Get In Touch | Address"
   });
 });
+router.get("/course/registration", function (req, res, next) {
+  res.render("pages/registration", {
+    title: "Testing Shastra | Contact Us | Get In Touch | Address"
+  });
+});
 0.;
 module.exports = router;
 //# sourceMappingURL=commonRoute.dev.js.map
