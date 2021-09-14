@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<body>
+
+  include ../include/head.pug  
+
+  include ../include/nav.pug  
+
+  <div class = "assignment-page">
+  h2 JavaScript Confirm Box
+  <button class="alert-btn" onclick="myFunction()">Click Me</button>
+  <p id="demo" ></p>
+  </div>
+
+
+  include ../include/footer.pug
+
+script.
+  function myFunction() {
+    var txt;
+    if (confirm("Press a button!")) {
+      txt = "You pressed OK!";
+    } else {
+      txt = "You pressed Cancel!";
+    }
+    document.getElementById("demo").innerHTML = txt;
+  }
+</body>
+</html>

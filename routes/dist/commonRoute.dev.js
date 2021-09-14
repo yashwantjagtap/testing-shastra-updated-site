@@ -24,6 +24,11 @@ router.get("/Recent_Placements", function (req, res, next) {
     title: "Testing Shastra | Contact Us | Get In Touch | Address"
   });
 });
+router.get("/registration", function (req, res, next) {
+  res.render("pages/registration", {
+    title: "Testing Shastra | Contact Us | Get In Touch | Address"
+  });
+});
 router.get("/assignments/:ass_name", function (req, res, next) {
   var data = req.params.ass_name;
 
