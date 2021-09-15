@@ -1,6 +1,10 @@
 "use strict";
 
 var router = require("express").Router();
+
+var middleware = require("./middleware");
+
+var IndexModel = require("../app/model/IndexModel");
 /* GET home page. */
 
 
@@ -19,7 +23,7 @@ router.get("/contact-us", function (req, res, next) {
     title: "Testing Shastra | Contact Us | Get In Touch | Address"
   });
 });
-router.get("/Recent_Placements", function (req, res, next) {
+router.get("/recent-placements", function (req, res, next) {
   res.render("pages/Recent_Placements", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address"
   });
@@ -117,5 +121,18 @@ router.get("/course/registration", function (req, res, next) {
   });
 });
 0.;
+router.post("/save-webinar-candidate", middleware.checkForPoolConnection, function (req, res) {
+  var data = req.body;
+  IndexModel.addNewStudent(res.pool, data).then(function (result) {
+    res.status(200).send({
+      call: 1
+    });
+  })["catch"](function (error) {
+    res.status(500).send({
+      call: 0,
+      error: error
+    });
+  });
+});
 module.exports = router;
 //# sourceMappingURL=commonRoute.dev.js.map
