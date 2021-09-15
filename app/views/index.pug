@@ -26,7 +26,7 @@
                         span.time    
                           <i class="fa fa-clock-o" aria-hidden="true"></i><span>4pm to 6pm</span>
                       .register
-                        <a href="/course/registration"><button type="button" class="button-updated" id="registerModal">Register Here</button></a>
+                        <a href="/webinar-registration"><button type="button" class="button-updated" id="registerModalBtn">Register Here</button></a>
                     .col-4.bg-absolute-right  
                       .hexagon
                         //- .hexagon-inner
@@ -571,5 +571,28 @@
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q", crossorigin="anonymous")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl", crossorigin="anonymous")
     script(src="/js/handlers/webinar.handler.js") 
+    script.
+      // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+        window.onscroll = function() {scrollFunction()};
+          function scrollFunction() {
+            if (document.body.scrollTop > 00 || document.documentElement.scrollTop > 140) {
+              document.getElementById("navLogoScroll").style.display = "block";
+              //- document.getElementById("site-navigation").style.background = "#2D7FC7";
+            } else {
+              document.getElementById("navLogoScroll").style.display = "none";
+              //- document.getElementById("site-navigation").style.background = "rgb(31 57 104)";
+            }
+          }
+          function scrollFunction() {
+            if (document.body.scrollTop > 00 || document.documentElement.scrollTop > 140) {
+              document.getElementById("navLogoScroll").style.display = "block";
+              //- document.getElementById("site-navigation").style.background = "#2D7FC7";
+            } else {
+              document.getElementById("navLogoScroll").style.display = "none";
+              //- document.getElementById("site-navigation").style.background = "rgb(31 57 104)";
+            }
+          }
+
+
   </body>
 </html>

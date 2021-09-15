@@ -450,6 +450,9 @@ a:hover, a:active {
 	margin: 0;
 	padding-left: 0;
 }
+/* #menu-item-363{
+	background-color: #2d7fc7;
+} */
 .main-navigation ul > li {
 	display: inline-block;
 	position: relative;
@@ -3768,9 +3771,12 @@ ul#follow_us_contacts li a:hover i {
 	outline: 0 !important;
 	box-shadow: none !important;
 }
+#registerModalBtn{
+	margin: 10px 0px 0px !important;
+	padding: 10px 25px !important;
+}
 
 /*********************************** new added footer *********************/
-
 .main-footer {
 	background-color: #1A1A1A;
 	padding-top: 35px;
@@ -3792,43 +3798,57 @@ ul#follow_us_contacts li a:hover i {
 	color: rgba(255, 255, 255, 0.658);
 	font-size: 15px;
 	width: 80%;
-	padding-top: 30px;
+	padding-top: 10px;
+	margin: 0;
   }
   
   .main-footer .footer-social-link .footer-social-media {
-	display: -webkit-box;
-	display: -ms-flexbox;
-	display: flex;
-	padding-top: 25px;
+	padding: 15px 0px;
   }
-  
   .main-footer .footer-social-link .footer-social-media ul {
-	display: -webkit-box;
-	display: -ms-flexbox;
 	display: flex;
 	list-style: none;
 	margin: 0;
-	-webkit-box-pack: center;
-		-ms-flex-pack: center;
-			justify-content: center;
-	-webkit-box-align: center;
-		-ms-flex-align: center;
-			align-items: center;
+	width: 50%;
+	justify-content: space-between;
+	align-items: center;
   }
   .main-footer .footer-social-link .footer-social-media ul li {
 	padding: 8px 12px;
 	margin-right: 15px;
 	border: 2px solid #cfcfcf;
 	border-radius: 50%;
-	
   }
-  
+  .main-footer .footer-social-link .footer-social-media ul li:hover a .fa-linkedin-square{
+	color:  #0e76a8;
+  }
+  .main-footer .footer-social-link .footer-social-media ul li:hover a .fa-facebook-square{
+	color: #5f82cc;
+  }
+  .main-footer .footer-social-link .footer-social-media ul li:hover a .fa-instagram{
+	background-image: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+	-webkit-background-clip: text;
+	/* Also define standard property for compatibility */
+	background-clip: text;
+	-webkit-text-fill-color: transparent;
+  }
+  .main-footer .footer-social-link .footer-social-media ul li:hover a .fa-youtube-square{
+	color: #FF0000;
+}
+  .main-footer .footer-social-link  .play-store-app-list {
+	  display: flex;
+	  justify-content: flex-start;
+	  align-items: center;
+  }
+  .main-footer .footer-social-link .footer-social-media ul li a{
+	  color: #fff !important;
+  } 
   .main-footer .footer-social-link .footer-social-media ul li:hover {
-	border: 2px solid #00dbde;
+	border: 2px solid#fff;
   }
-  
+
   .main-footer .footer-social-link .footer-social-media ul li i {
-	font-size: 18px;
+	font-size: 22px;
 	margin: 0;
   }
   
@@ -3864,14 +3884,34 @@ ul#follow_us_contacts li a:hover i {
 	height: 1px;
 	margin-top: 30px;
 }
- 
+@media (max-width: 480px){
+	.main-footer .footer-text p{
+		font-size: 12px;
+		width: 100%;
+	}	
+} 
 
 /********************************responsive,css***********************************/
-/* @media (max-width: 480px){
-	.social_htext_wrap:after ,.social_htext_wrap,.header_info_wrap{
+@media (max-width: 480px){
+	/* .social_htext_wrap:after ,.social_htext_wrap,.header_info_wrap{
+		display: none;
+	} */
+	.mb-custom-logo-nav{
+		float: left;
+		padding: 10px 0px 0px;
+		display: block !important;
+	}
+	.custom-logo-nav{
 		display: none;
 	}
-} */
+}
 .custom-logo-nav{
 	filter: brightness(0) invert(1);
+	float: left;
+	padding: 10px 0px 7px;
+}
+.mb-custom-logo-nav{
+	float: left;
+	padding: 10px 0px 0px;
+	display: none;
 }

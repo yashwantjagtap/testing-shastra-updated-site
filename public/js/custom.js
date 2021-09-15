@@ -78,7 +78,7 @@ jQuery(document).ready(function ($) {
     pager: false,
     nextText: "",
     prevText: "",
-    auto: true,
+    auto: false,
     touchEnabled: false,
     onSliderLoad: function () {
       $("#header_slider_wrap").css("visibility", "visible");

@@ -3,7 +3,7 @@ var myConnection = require("express-myconnection"), // express-myconnection modu
   dbOptions = {
     host: 'localhost',
     user: 'root',
-    password: '',
+    password: '1234',
     port: 3306,
     database: 'testing_shastra',
   };
