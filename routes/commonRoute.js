@@ -18,18 +18,40 @@ router.get("/contact-us", function (req, res, next) {
   });
 });
 
-router.get("/recent-placements", function (req, res, next) {
-  res.render("pages/Recent_Placements", {
-    title: "Testing Shastra | Contact Us | Get In Touch | Address",
-  });
-});
+router.get(
+  "/recent-placements",
+  middleware.checkForPoolConnection,
+  function (req, res) {
+    var years = [];
+    IndexModel.getPlacementYear(res.pool)
+      .then((result) => {
+        years = result;
+        return IndexModel.getPlacementList(res.pool);
+      })
+      .then((result) => {
+        res.render("pages/Recent_Placements", {
+          title: "Testing Shastra | Contact Us | Get In Touch | Address",
+          list: result,
+          years: years,
+        });
+      })
+      .catch((error) => {
+        res.send({ call: 0, error });
+      });
+    return false;
+    // id: 5,
+    // emp_name: "MAYURI T.",
+    // emp_company: "TCS",
+    // emp_package: "6.50LPA",
+    // emp_year: 2017,
+  }
+);
 
 router.get("/registration", function (req, res, next) {
   res.render("pages/registration", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address",
   });
 });
-
 
 router.get("/assignments/:ass_name", function (req, res, next) {
   var data = req.params.ass_name;
@@ -118,8 +140,7 @@ router.get("/course/registration", function (req, res, next) {
   });
 });
 
-
-0.
+0;
 router.post(
   "/save-webinar-candidate",
   middleware.checkForPoolConnection,

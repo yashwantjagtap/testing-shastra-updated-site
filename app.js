@@ -13,16 +13,16 @@ let indexRouter = require("./routes/");
 
 let app = express();
 
-// var db_connect = require("./app/config/db.connect"); // connection string
-// var connection = db_connect.myConnection(
-//   db_connect.mysql,
-//   db_connect.dbOptions,
-//   "single"
-// );
+var db_connect = require("./app/config/db.connect"); // connection string
+var connection = db_connect.myConnection(
+  db_connect.mysql,
+  db_connect.dbOptions,
+  "single"
+);
 // view engine setup
 app.set("views", path.join(__dirname, "app", "views"));
 app.set("view engine", "pug");
-// app.use(connection); 
+app.use(connection);
 app.use(session);
 app.use(logger("dev"));
 app.use(express.json());

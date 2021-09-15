@@ -10,161 +10,31 @@
 <body>
   .container
     .row
-      .col-12
-        .div-header
-          h4 Placements in Year 2020
-        <table class="table">
-          <thead class="thead-blue">
-            <tr>
-              <th scope="col">Sr.No</th>
-              <th scope="col">Student name</th>
-              <th scope="col">Company name</th>
-              <th scope="col">Annual package</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-          </tbody>
-        </table>      
-    .row
-      .col-12
-        .div-header
-          h4 Placements in Year 2020
-        <table class="table">
-          <thead class="thead-blue">
-            <tr>
-              <th scope="col">Sr.No</th>
-              <th scope="col">Student name</th>
-              <th scope="col">Company name</th>
-              <th scope="col">Annual package</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-          </tbody>
-        </table>      
-    .row
-      .col-12
-        .div-header
-          h4 Placements in Year 2020
-        <table class="table">
-          <thead class="thead-blue">
-            <tr>
-              <th scope="col">Sr.No</th>
-              <th scope="col">Student name</th>
-              <th scope="col">Company name</th>
-              <th scope="col">Annual package</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>4</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>5</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-            <tr>
-              <td>6</td>
-              <td>deepak shinde</td>
-              <td>infosys</td>
-              <td>15 LPA</td>
-            </tr>
-          </tbody>
-        </table>      
+      each year in years
+        .col-12
+          .div-header
+            h4 Placements in Year #{year.emp_year}
+          <table class="table">
+            <thead class="thead-blue">
+              <tr>
+                <th scope="col">Sr.No</th>
+                <th scope="col">Student name</th>
+                <th scope="col">Company name</th>
+                <th scope="col">Annual package</th>
+              </tr>
+            </thead>
+            <tbody>
+              each candidate,index in list
+                if(candidate.emp_year == year.emp_year)
+                  <tr>
+                    <td>#{index + 1}</td>
+                    <td style="text-align:left">#{candidate.emp_name}</td>
+                    <td>#{candidate.emp_company}</td>
+                    <td>#{candidate.emp_package}</td>
+                  </tr>
+            </tbody>
+          </table>      
+
 
 //- script(src = "js/load-csv-to-html.js")
 include ../include/footer.pug

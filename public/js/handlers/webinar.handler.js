@@ -21,8 +21,4 @@ $(function () {
         console.log(error);
       });
   });
-
-  $(document).on("click", "#registerModal", function () {
-    alert("submit clicked");
-  });
 });
