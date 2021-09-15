@@ -134,7 +134,7 @@ router.get("/course/rest-api-developer", function (req, res, next) {
   });
 });
 
-router.get("/course/registration", function (req, res, next) {
+router.get("/webinar-registration", function (req, res, next) {
   res.render("pages/registration", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address",
   });

@@ -865,4 +865,23 @@ i {
   border-radius: 20px;
   cursor: pointer;
 }
+
+@media (max-width: 480px) {
+  .key-feature {
+    display: none !important;
+  }
+  .mentor-section {
+    background-size: 72% 28%;
+  }
+  .course-detail .left-body {
+    margin-top: 0 !important;
+  }
+  .course-detail .left-body .course-info .specification-list, .you-tube {
+    display: block !important;
+    text-align: center;
+  }
+  .Syllabus-section {
+    padding: 0.5em 1em !important;
+  }
+}
 /*# sourceMappingURL=updated.css.map */

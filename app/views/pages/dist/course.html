@@ -33,8 +33,22 @@
     .site-description {
       color: #1e73be;
     }
+  </style>
+  <script>
+    // When the user scrolls down 80px from the top of the document, resize the navbar's padding and the logo's font size
+      window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+          if (document.body.scrollTop > 00 || document.documentElement.scrollTop > 140) {
+            document.getElementById("navLogoScroll").style.display = "block";
+            //- document.getElementById("site-navigation").style.background = "#2D7FC7";
+          } else {
+            document.getElementById("navLogoScroll").style.display = "none";
+            //- document.getElementById("site-navigation").style.background = "rgb(31 57 104)";
+          }
+        }
     
-  </style><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
+    
+  </script><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
 <link rel="icon" href="/images/Favicon.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />
 <meta name="msapplication-TileImage" content="/images/Favicon.png" />
@@ -79,7 +93,7 @@
 <div class="logo_info_wrap">
 <div class="header-logo-container">
 <a href="/" class="custom-logo-link" rel="home" itemprop="url">
-<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="Free Education WordPress Theme – Enlighten : Features Demo" itemprop="logo"/></a>
+<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="" itemprop="logo"/></a>
 </div>
 <div class="header_info_wrap">
 <div class="phone_header wow fadeIn">
@@ -114,6 +128,7 @@
 </div>
 <nav id="site-navigation" class="main-navigation center top" role="navigation">
 <div class="ak-container">
+<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="150" height="90" src="/images/logo 1.png" class="custom-logo-nav mb-custom-logo-nav" id="mb-navLogoScroll" alt="" itemprop="logo"/></a>     
 <div class="mb-ham">
 <span></span>
 <span></span>
@@ -121,6 +136,7 @@
 </div>
 <div class="menu-menu-1-container mmenu-wrapper">
 <ul id="primary-menu" class="menu">
+<img width="150" height="90" src="/images/logo 1.png" class="custom-logo-nav" id="navLogoScroll" alt="" itemprop="logo"/></a> 
 <li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-255">
 <a href="/">Home</a>
 </li>
@@ -128,27 +144,24 @@
 <a href="#">Courses</a>
 <ul class="sub-menu">
 <li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144">
-<a href="/course/automation-testing">Java  Selenium</a>
+<a href="/course/automation-testing">Automation testing (java)</a>
 </li>
 <li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
-<a href="/course/python-selenium">Python Selenium</a>
-</li>
-<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142">
-<a href="/course/react-js">react JS</a>
+<a href="/course/python-selenium">Automation testing (python)</a>
 </li>
 <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
-<a href="/course/rest-api-developer">rest api</a>
+<a href="/course/rest-api-developer">rest api testing</a>
 </li>
 <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
-<a href="/course/java-full-stack">Java Full-Stack </a>
+<a href="/course/java-full-stack">Java Full-Stack development</a>
 </li>
 <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
-<a href="/course/mern-stack">mern stack </a>
+<a href="/course/mern-stack">mern stack development</a>
 </li>
 </ul>
 </li>
 <li id="menu-item-363" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-363">
-<a href="#">Downloads</a>
+<a href="/recent-placements">Recent Placements</a>
 </li>
 <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
 <a href="#">Videos</a>
@@ -170,7 +183,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <div id="enlighten-breadcrumb"><a href="/">Home  > <span class="current">Cours  > </span><span class="current">React</span></a></div>
+          <div id="enlighten-breadcrumb"><a href="/">Home  > <span class="current">Cours  > </span><span class="current">Java Selenium </span></a></div>
           <div class="course-introduction">
             <p class="course-title">Java Selenium Automation testing</p>
             <div class="course-rating"><span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>355 Ratings<span>3065 Learners</span></div>
@@ -517,11 +530,19 @@
               <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, tempora modi? Rerum, distinctio. Quasi eos explicabo unde voluptates quod minus deserunt optio provident nobis dolorum!</p>
             </div>
             <div class="footer-social-link">
-              <ul>
-                <li><i class="fa fa-linkedin-square" aria-hidden="true"></i></li>
-                <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
-                <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-              </ul>
+              <div class="footer-social-media">
+                <ul>
+                  <li><a href="https://www.linkedin.com/in/testing-shastra-7960201a2" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
+                  <li><a href="https://m.facebook.com/ts.avinashpingale/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.instagram.com/testingshastra/" target="blank">   <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                  <li><a href="https://www.instagram.com/testingshastra/" target="blank">
+                         <i class="fa fa-youtube-square" aria-hidden="true"></i>    </a></li>
+                </ul>
+              </div>
+              <div class="play-store-app-list"> 
+                <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/app-store.png" alt="alt"/></a></div>
+                <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/google-play.png" alt="alt"/></a></div>
+              </div>
             </div>
           </div>
           <div class="col-lg-3">
@@ -532,6 +553,7 @@
                 <li>Java Full Stack Development</li>
                 <li>Automation Testing-Python</li>
                 <li>Angular 8</li>
+                <li>MERN Stack Development </li>
               </ul>
             </div>
           </div>
