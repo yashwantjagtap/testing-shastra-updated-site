@@ -79,6 +79,56 @@ jQuery(document).ready(function ($) {
     nextText: "",
     prevText: "",
     auto: true,
+    touchEnabled: false,
+    onSliderLoad: function () {
+      $("#header_slider_wrap").css("visibility", "visible");
+    },
+  });
+
+  //Home Video Section
+  var myPlayer;
+  myPlayer = $(".js-video").YTPlayer();
+  $("#togglePlay").click(function () {
+    $("#container-1").YTPTogglePlay(function () {});
+    $("#togglePlay").toggleClass("play");
+    $("#section_video .section_title").toggleClass("play");
+    $(".video_wrap").toggleClass("play");
+    return false;
+  });
+  $(".YTPOverlay").click(function () {
+    $("#togglePlay").toggleClass("play");
+    $("#section_video .section_title").toggleClass("play");
+    $(".video_wrap").toggleClass("play");
+    return false;
+  });
+
+  //Service Content Slide
+  $(".service_slider").owlCarousel({
+    nav: true,
+    navElement: "div",
+    navText: [
+      '<i class="fa fa-long-arrow-left" aria-hidden="true"></i>',
+      '<i class="fa fa-long-arrow-right" aria-hidden="true"></i>',
+    ],
+    margin: 10,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      },
+    },
+  });
+  //Home Slider JS
+  $(".header_slider").bxSlider({
+    pager: false,
+    nextText: "",
+    prevText: "",
+    auto: true,
     onSliderLoad: function () {
       $("#header_slider_wrap").css("visibility", "visible");
     },

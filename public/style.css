@@ -3768,63 +3768,6 @@ ul#follow_us_contacts li a:hover i {
 	outline: 0 !important;
 	box-shadow: none !important;
 }
-/***************************************webinar-add ************************************/
-.webinar-add{
-	background-color: #000;
-	height: 50px;
-	color: #fff;
-	padding: 5px 0 0 0 ;
-	position: fixed;
-	bottom: 0%;
-	z-index: 9999999;
-	width: 100%;
-}
-.webinar-fixed-Add p{
-	font-size: 15px;
-	margin: 10px 0px;
-	text-transform: uppercase;
-}
-
-/* .webinar-add .register-here{
-	border-radius: 50px;
-	color: #fff;
-	background-color: #2d7fc7;
-	margin: 10px 0px 10px auto;
-	outline: none;
-	border: 0px;
-	box-shadow: none;
-	text-align: center;
-	padding: 5px 20px;
-} */
-.webinar-fixed-Add{
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-}
-@media (max-width: 480px) {
-	.webinar-add{
-		max-height: 50px;
-		background-color: #000;
-	}
-	.webinar-add::after{
-		background-color: rgba(0, 0, 0, .8);
-		background-position: left bottom;
-		background-size: 200%;
-	}
-	.webinar-fixed-Add p{
-		font-size: 10px;
-		margin: 5px 0px;
-		text-transform: capitalize;
-	}
-	#webinarSubmit{
-		margin: 5px 0px 4px; 
-		font-size: 10px;
-	}
-}
-/*************************************** registration from modal************************************/
-.modal{
-	z-index: 99999999999999999999 !important;
-}
 
 /*********************************** new added footer *********************/
 
@@ -3929,3 +3872,6 @@ ul#follow_us_contacts li a:hover i {
 		display: none;
 	}
 } */
+.custom-logo-nav{
+	filter: brightness(0) invert(1);
+}

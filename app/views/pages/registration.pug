@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  style.
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    .wrapper-div {
+      padding: 100px 200px;
+      //- background-image: linear-gradient(107deg, rgba(2, 108, 223, 1) 27.4%, rgba(0, 255, 255, 1) 92.7%);
+    }
+    .outer-row {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+    }
+    .left-body {
+      background-image: radial-gradient(
+        circle farthest-corner at 10% 20%,
+        rgba(3, 235, 255, 1) 0%,
+        rgba(152, 70, 242, 1) 100.2%
+      ); 
+      border:0 40px 40px 0;
+      border-radius: 10px;
+      color: #fff;
+      padding: 50px !important;
+    }
+    .class-specification {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .left-side-text {
+      padding: 0 0 0 10px;
+    }
+    .left-side-text h6 {
+      font-size: 18px;
+      color:#fff;
+      text-transform: capitalize;
+    }
+    .left-side-text p {
+      color:#fff;
+      font-size: 12px;
+      text-align: justify;
+      text-transform: capitalize;
+    }
+    .inner-icon {
+      background: rgba(255, 255, 255, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      /* align-self: flex-start; */
+    }
+    .inner-icon img {
+      height: 60px;
+      width: 60px;
+      padding: 10px;
+      filter: brightness(0) invert(1);
+    }
+    .right-body {
+      background-color: #fff;
+      padding: 50px !important;
+    }
+    input {
+      border: 0px !important;
+      border-radius: 0px !important;
+      outline: none !important;
+      border-bottom: 1px solid red !important;
+    }
+    input:focus {
+      outline: none !important;
+      border-bottom: 1px solid green !important;
+      box-shadow: none !important;
+    }
+
+
+<body>
+  include ../include/head.pug  
+  include ../include/nav.pug  
+  <div class="wrapper-div">
+    <div class="container">
+      <div class="row outer-row">
+        <div class="col-6 left-body">
+          <div class="class-specification">
+            <div class="inner-icon">
+              <img src="/images/100.png" height="80px " width="80px" alt="">
+            </div>
+            <div class="left-side-text">
+              <h6>100% Job Placement</h6>
+              <p> Our in house Placement Coordinators takes care of the placement in good company along
+                with handsome annual package.
+                We are tied up with trending IT companies across India and commited to provide 100%
+                placement or money back guarantee</p>
+            </div>
+          </div>
+          <div class="class-specification">
+            <div class="inner-icon">
+              <img src="/images/expert.png" alt="">
+            </div>
+            <div class="left-side-text">
+              <h6>Industry Expert Trainers</h6>
+              <p>All our trainers are IT Industry expert having more than 7Yrs of IT Experience.</p>
+            </div>
+          </div>
+          <div class="class-specification">
+            <div class="inner-icon">
+              <img src="/images/online-course.png" alt="">
+            </div>
+            <div class="left-side-text">
+              <h6>Industy aligned courses</h6>
+              <p>All our Courses are designed after a deep research with industry experts, Placement
+                Officers and Technical Heads. This leads to narrow down the diversified technical expertise.</p>
+            </div>
+          </div>
+          <div class="class-specification">
+            <div class="inner-icon">
+              <img src="/images/live.png" alt="">
+            </div>
+            <div class="left-side-text">
+              <h6>Live project based training</h6>
+              <p>We ensure to provide a training parallel to the Live project. We take care of training of
+                different Project Build Tools like JIRA during the course</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-6 right-body">
+          <div class="header-text">
+            <h3>register-Here for live webinar</h3>
+              <form action="">
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="first name" name="candidateFName">                    
+                      </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <input type="text" class="form-control" placeholder="last name" name="candidateLName">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-6">
+                    <div class="form-group">
+                      <input type="number" class="form-control" placeholder="Mobile Number" name="candidateMobileNo">
+                    </div>
+                  </div>
+                  <div class="col-6">
+                    <div class="form-group">
+                      <input type="email" class="form-control" placeholder="Email_iD" name="candidateEmailId">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <input type="number" class="form-control" placeholder="Institute Name" name="candidateInstituteName">
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+
+
+
+  include ../include/footer.pug
+</body>
+</html>
