@@ -24,10 +24,11 @@
               </tr>
             </thead>
             <tbody>
-              each candidate,index in list
+              - var index = 1;
+              each candidate in list
                 if(candidate.emp_year == year.emp_year)
                   <tr>
-                    <td>#{index + 1}</td>
+                    <td>#{index++}</td>
                     <td style="text-align:left">#{candidate.emp_name}</td>
                     <td>#{candidate.emp_company}</td>
                     <td>#{candidate.emp_package}</td>
