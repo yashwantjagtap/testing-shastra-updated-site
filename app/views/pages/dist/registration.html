@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<style>
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+  .wrapper-div {
+    padding: 100px 200px;
+    //- background-image: linear-gradient(107deg, rgba(2, 108, 223, 1) 27.4%, rgba(0, 255, 255, 1) 92.7%);
+  }
+  .outer-row {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+  .left-body {
+    background-image: radial-gradient(
+      circle farthest-corner at 10% 20%,
+      rgba(3, 235, 255, 1) 0%,
+      rgba(152, 70, 242, 1) 100.2%
+    ); 
+    border:0 40px 40px 0;
+    border-radius: 10px;
+    color: #fff;
+    padding: 50px !important;
+  }
+  .class-specification {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  .left-side-text {
+    padding: 0 0 0 10px;
+  }
+  .left-side-text h6 {
+    font-size: 18px;
+    color:#fff;
+    text-transform: capitalize;
+  }
+  .left-side-text p {
+    color:#fff;
+    font-size: 12px;
+    text-align: justify;
+    text-transform: capitalize;
+  }
+  .inner-icon {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    /* align-self: flex-start; */
+  }
+  .inner-icon img {
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    filter: brightness(0) invert(1);
+  }
+  .right-body {
+    background-color: #fff;
+    padding: 50px !important;
+  }
+  input {
+    border: 0px !important;
+    border-radius: 0px !important;
+    outline: none !important;
+    border-bottom: 1px solid red !important;
+  }
+  input:focus {
+    outline: none !important;
+    border-bottom: 1px solid green !important;
+    box-shadow: none !important;
+  }
+  
+  
+</style><body><head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="profile" href="https://gmpg.org/xfn/11" />
+<title></title>
+<link rel="stylesheet" href="/style.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/css/fonts-awesome/css/font-awesome.css" type="text/css" media="all" />
+<link rel="stylesheet" href="/js/bxslider/jquery.bxslider.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="/js/owl-carousel/owl.carousel.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="/css/responsive.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="/js/superfish/superfish.css" type="text/css" media="all"/>
+<link rel="stylesheet" href="/js/wow/animate.css" type="text/css" media="all"/>
+<link rel="stylesheet"  href="/js/youtube-video/jquery.mb.YTPlayer.css" type="text/css" media="all"/>
+<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery-migrate.min.js" ></script>
+<script type="text/javascript" src="/js/jquery/jquery.bxslider.min.js"></script>
+<script type="text/javascript" src="/js/jquery/frontend.js"></script>
+<script type="text/javascript" src="/js/jquery/jquery.selectbox-0.2.min.js"></script>
+<script type="text/javascript" src="/js/youtube-video/jquery.mb.YTPlayer.js"></script>
+<script type="text/javascript" src="/js/superfish/superfish.js"></script>
+<script type="text/javascript" src="/js/sticky-sidebar/theia-sticky-sidebar.js"></script>
+<script type="text/javascript" src="/js/wow/wow.js"></script>
+<script type="text/javascript" src="/js/superfish/hoverIntent.js"></script>
+<script type="text/javascript" src="/js/waypoint/jquery.waypoints.js"></script>
+<script type="text/javascript" src="/js/bxslider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="/js/owl-carousel/owl.carousel.js"></script>
+<script type="text/javascript" src="/js/counter-up/jquery.counterup.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script>
+<style>
+  .site-title a,
+  .site-description {
+    color: #1e73be;
+  }
+  
+</style><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
+<link rel="icon" href="/images/Favicon.png" sizes="192x192" />
+<link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />
+<meta name="msapplication-TileImage" content="/images/Favicon.png" />
+</head><div class="ak-container">
+<div class="social_htext_wrap">
+<div class="header_text">
+<span class="text_wrap">Join with us and be a part of the success</span>
+</div>
+<div class="header_social_link">
+<div class="fa_link_wrap">
+<a target="_blank" href="#">
+<span class="fa_wrap"> <i class="fa fa-facebook"></i> </span>
+<div class="link_wrap">facebook</div>
+</a>
+</div>
+<div class="fa_link_wrap">
+<a target="_blank" href="#">
+<span class="fa_wrap"> <i class="fa fa-twitter"></i> </span>
+<div class="link_wrap">twitter</div>
+</a>
+</div>
+<div class="fa_link_wrap">
+<a target="_blank" href="#">
+<span class="fa_wrap">
+<i class="fa fa-pinterest-p" aria-hidden="true"> </i>
+</span>
+<div class="link_wrap">pinterest</div>
+</a>
+</div>
+<div class="fa_link_wrap">
+<a target="_blank" href="#">
+<span class="fa_wrap"> <i class="fa fa-instagram"></i> </span>
+<div class="link_wrap">instagram</div>
+</a>
+</div>
+</div>
+</div>
+<div class="logo_info_wrap">
+<div class="header-logo-container">
+<a href="/" class="custom-logo-link" rel="home" itemprop="url">
+<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="" itemprop="logo"/></a>
+</div>
+<div class="header_info_wrap">
+<div class="phone_header wow fadeIn">
+<div class="fa_icon">
+<i class="fa fa-phone" aria-hidden="true"></i>
+</div>
+<div class="title_phone">
+<span class="pnone_title">Call Support</span>
+<span class="phone">+91-9130502135</span>
+</div>
+</div>
+<div class="email_header wow fadeIn">
+<div class="fa_icon">
+<i class="fa fa-envelope-o" aria-hidden="true"></i>
+</div>
+<div class="title_email_wrap">
+<span class="title_email">Email Support</span>
+<span class="email_address">info@testingshastra.com</span>
+</div>
+</div>
+<div class="location_header wow fadeIn">
+<div class="fa_icon">
+<i class="fa fa-map-marker" aria-hidden="true"></i>
+</div>
+<div class="title_location_wrap">
+<span class="title_location">Location</span>
+<span class="location">New Sangvi, Pune</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<nav id="site-navigation" class="main-navigation center top" role="navigation">
+<div class="ak-container">
+<div class="mb-ham">
+<span></span>
+<span></span>
+<span></span>
+</div>
+<div class="menu-menu-1-container mmenu-wrapper">
+<ul id="primary-menu" class="menu">
+<img width="150" height="90" src="/images/logo 1.png" class="custom-logo-nav" id="navLogoScroll" alt="" itemprop="logo"/></a> 
+<li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-255">
+<a href="/">Home</a>
+</li>
+<li id="menu-item-153" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-153"">
+<a href="#">Courses</a>
+<ul class="sub-menu">
+<li id="menu-item-144" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144">
+<a href="/course/automation-testing">Automation testing (java)</a>
+</li>
+<li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
+<a href="/course/python-selenium">Automation testing (python)</a>
+</li>
+<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142">
+<a href="/course/react-js">react JS</a>
+</li>
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
+<a href="/course/rest-api-developer">rest api testing</a>
+</li>
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
+<a href="/course/java-full-stack">Java Full-Stack development</a>
+</li>
+<li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
+<a href="/course/mern-stack">mern stack development</a>
+</li>
+</ul>
+</li>
+<li id="menu-item-363" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-363">
+<a href="/Recent_Placements">Recent Placements</a>
+</li>
+<li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
+<a href="#">Videos</a>
+</li>
+<li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">
+<a href="/assignments">Assignments</a>
+</li>
+<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253">
+<a href="#">About</a>
+</li>
+<li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-242 current_page_item menu-item-251">
+<a href="/contact-us">Contact Us</a>
+</li>
+</ul>
+</div>
+</div>
+</nav><div class="wrapper-div">
+<div class="container">
+<div class="row outer-row">
+<div class="col-6 left-body">
+<div class="class-specification">
+<div class="inner-icon">
+<img src="/images/100.png" height="80px " width="80px" alt="">
+</div>
+<div class="left-side-text">
+<h6>100% Job Placement</h6>
+<p> Our in house Placement Coordinators takes care of the placement in good company along
+<with>handsome annual package.</with>
+<We>are tied up with trending IT companies across India and commited to provide 100%</We>
+<placement>or money back guarantee</p></placement></div>
+</div>
+<div class="class-specification">
+<div class="inner-icon">
+<img src="/images/expert.png" alt="">
+</div>
+<div class="left-side-text">
+<h6>Industry Expert Trainers</h6>
+<p>All our trainers are IT Industry expert having more than 7Yrs of IT Experience.</p>
+</div>
+</div>
+<div class="class-specification">
+<div class="inner-icon">
+<img src="/images/online-course.png" alt="">
+</div>
+<div class="left-side-text">
+<h6>Industy aligned courses</h6>
+<p>All our Courses are designed after a deep research with industry experts, Placement
+<Officers>and Technical Heads. This leads to narrow down the diversified technical expertise.</p></Officers></div>
+</div>
+<div class="class-specification">
+<div class="inner-icon">
+<img src="/images/live.png" alt="">
+</div>
+<div class="left-side-text">
+<h6>Live project based training</h6>
+<p>We ensure to provide a training parallel to the Live project. We take care of training of
+<different>Project Build Tools like JIRA during the course</p></different></div>
+</div>
+</div>
+<div class="col-6 right-body">
+<div class="header-text">
+<h3>register-Here for live webinar</h3>
+<form action="">
+<div class="row">
+<div class="col-6">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="first name" name="candidateFName">                    
+</div>
+</div>
+<div class="col-6">
+<div class="form-group">
+<input type="text" class="form-control" placeholder="last name" name="candidateLName">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-6">
+<div class="form-group">
+<input type="number" class="form-control" placeholder="Mobile Number" name="candidateMobileNo">
+</div>
+</div>
+<div class="col-6">
+<div class="form-group">
+<input type="email" class="form-control" placeholder="Email_iD" name="candidateEmailId">
+</div>
+</div>
+</div>
+<div class="row">
+<div class="col-12">
+<div class="form-group">
+<input type="number" class="form-control" placeholder="Institute Name" name="candidateInstituteName">
+</div>
+</div>
+</div>
+<div class="modal-footer">
+<button type="submit" class="btn btn-primary">Submit</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+<footer>
+  <div class="main-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="footer-logo"><img src="/images/background/ts text (1).png" alt="alt"/></div>
+          <div class="footer-text">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, tempora modi? Rerum, distinctio. Quasi eos explicabo unde voluptates quod minus deserunt optio provident nobis dolorum!</p>
+          </div>
+          <div class="footer-social-link">
+            <div class="footer-social-media">
+              <ul>
+                <li><a href="https://www.linkedin.com/in/testing-shastra-7960201a2" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://m.facebook.com/ts.avinashpingale/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/testingshastra/" target="blank">   <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+              </ul>
+            </div>
+            <div class="play-store-app-list"> 
+              <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/app-store.png" alt="alt"/></a></div>
+              <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/google-play.png" alt="alt"/></a></div>
+              <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/google-play.png" alt="alt"/></a></div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-course">
+            <h3>OUR COURSES</h3>
+            <ul>
+              <li>Automation Testing-Java</li>
+              <li>Java Full Stack Development</li>
+              <li>Automation Testing-Python</li>
+              <li>Angular 8</li>
+              <li>MERN Stack Development </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="footer-contact">
+            <h3>CONTACT</h3>
+            <ul>
+              <li><i class="fa fa-map-marker" aria-hidden="true"></i> Vidya Nagar, New Sangvi, Pune</li>
+              <li><i class="fa fa-phone" aria-hidden="true"></i> +91-9130502135</li>
+              <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@testingshastra.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom-line"></div>
+    </div>
+  </div>
+</footer></body>
+</html>

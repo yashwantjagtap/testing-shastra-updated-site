@@ -74,14 +74,15 @@ jQuery(document).ready (function($){
         }
     });
     //Home Slider JS
-    $('.header_slider').bxSlider({
+    $(".header_slider").bxSlider({
         pager: false,
-        nextText: '',
-        prevText: '',
-        auto:true,
-        onSliderLoad: function(){
-            $("#header_slider_wrap").css("visibility", "visible");
-          }
+        nextText: "",
+        prevText: "",
+        auto: true,
+        touchEnabled: false,
+        onSliderLoad: function () {
+          $("#header_slider_wrap").css("visibility", "visible");
+        },
     });
     
     //Home Video Section
