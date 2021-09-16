@@ -11,7 +11,8 @@
 <link rel="stylesheet" href="/js/superfish/superfish.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="/js/wow/animate.css" type="text/css" media="all"/>
 <link rel="stylesheet"  href="/js/youtube-video/jquery.mb.YTPlayer.css" type="text/css" media="all"/>
-<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/><script type="text/javascript" src="/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="/js/jquery/jquery-migrate.min.js" ></script>
 <script type="text/javascript" src="/js/jquery/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="/js/jquery/frontend.js"></script>
@@ -44,6 +45,21 @@
       }
     }
   
+</script>
+<script>
+  myButton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+      } else {
+        myButton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
 </script><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
 <link rel="icon" href="/images/Favicon.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />

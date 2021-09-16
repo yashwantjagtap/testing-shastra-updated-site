@@ -1,67 +1,5 @@
-//- <footer id="colophon" class="site-footer" role="contentinfo">
-//-   <div class="ak-container">
-//-     <div class="footer_area clearfix">
-//-     <div class="footer_area_one">
-//-       <section id="text-3" class="widget widget_text">
-//-       <div class="textwidget">
-//-         <div class="footer_content_area">
-//-         <img src="/images/logo 1.png" />
-//-         </div>
-//-       </div>
-//-       </section>
-//-     </div>
-//-     <div class="footer_area_two">
-//-       <section id="enlighten_recent_news-6" class="widget widget_enlighten_recent_news">
-//-       <div class="footer_RN_wrap">
-//-         <div class="rn_post_wrap no_image">
-//-         <div class="rn_post_loop">
-//-           <div class="title_content_wrap">
-//-           <div class="tn_title">
-//-             <a href="#">Our Courses</a>
-//-           </div>
-//-           <div class="rn_content">
-//-             <ul>
-//-             <li>Automation Tesing-Java</li>
-//-             <li>Java Full Stack Development</li>
-//-             <li>Automation Testing-Python</li>
-//-             <li>Angular 8</li>
-//-             </ul>
-//-           </div>
-//-           </div>
-//-         </div>
-//-         </div>
-//-       </div>
-//-       </section>
-//-     </div>
-//-     <div class="footer_area_three">
-//-       <section id="enlighten_info-3" class="widget widget_enlighten_info">
-//-       <div class="footer_info_wrap">
-//-         <div class="footer_widget_title">
-//-         Quick Contact
-//-         <div class="faq_dot"></div>
-//-         </div>
-
-//-         <div class="info_wrap">
-//-         <div class="location_info">
-//-           <span class="fa_icon_info"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-//-           <span class="location">Vidya Nagar, New Sangvi, Pune</span >
-//-         </div>
-//-         <div class="phone_info">
-//-           <span class="fa_icon_info"><i class="fa fa-phone" aria-hidden="true"></i></span>
-//-           <span class="phone">+91-9130502135</span>
-//-         </div>
-
-//-         <div class="email_info">
-//-           <span class="fa_icon_info"><i class="fa fa-envelope-o" aria-hidden="true"></i></span>
-//-           <span class="email">info@testingshastra.com</span>
-//-         </div>
-//-         </div>
-//-       </div>
-//-       </section>
-//-     </div>
-//-     </div>
-//-   </div>
-//- </footer>
+.scrollTop
+  <i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i>
 
 footer
   .main-footer
@@ -71,7 +9,7 @@ footer
           .footer-logo
             img(src="/images/background/ts text (1).png", alt)
           .footer-text
-            p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, tempora modi? Rerum, distinctio. Quasi eos explicabo unde voluptates quod minus deserunt optio provident nobis dolorum!
+            p Testing Shastra is Pune based leading Software Training Institute. We are committed to provide best in market training with 100% placement guarantee.
           .footer-social-link
             .footer-social-media
               ul
@@ -85,11 +23,11 @@ footer
                   a(href="https://www.instagram.com/testingshastra/" , target="blank")    
                     i.fa.fa-instagram(aria-hidden="true")
                 li
-                  a(href="https://www.instagram.com/testingshastra/" , target="blank")    
+                  a(href="https://www.youtube.com/channel/UCg_SUG_BAPtVUvTSKse2xBg" , target="blank")    
                     <i class="fa fa-youtube-square" aria-hidden="true"></i>    
             .play-store-app-list  
               .play-store
-                a(href="https://play.google.com/store/apps/details?id=co.khal.uvsug", target="blank")
+                a(href="https://apps.apple.com/in/app/classplus/id1324522260", target="blank")
                   img(src="/images/background/app-store.png", alt).app-logo
               .play-store
                 a(href="https://play.google.com/store/apps/details?id=co.khal.uvsug", target="blank")
@@ -98,21 +36,26 @@ footer
           .footer-course
             h3 OUR COURSES
             ul
-              li Automation Testing-Java
-              li Java Full Stack Development
-              li Automation Testing-Python
-              li Angular 8
-              li MERN Stack Development 
+              li 
+                a(href="/course/automation-testing")  Automation testing (java)
+              li 
+                a(href="/course/python-selenium") Automation testing (python)
+              li 
+                a(href="/course/rest-api-developer") rest api testing
+              li
+                a(href="/course/java-full-stack") Java Full-Stack development
+              li 
+                a(href="/course/mern-stack") mern stack development
         .col-lg-3
           .footer-contact
             h3 CONTACT
             ul
               li
                 i.fa.fa-map-marker(aria-hidden="true")
-                |  Vidya Nagar, New Sangvi, Pune
+                  a(href="/contact-us") Vidya Nagar, New Sangvi, Pune
               li
                 i.fa.fa-phone(aria-hidden="true")
-                |  +91-9130502135
+                  a(href="tel:9130502135") +91-9130502135
               li
                 i.fa.fa-envelope-o(aria-hidden="true")
                 |  info@testingshastra.com
