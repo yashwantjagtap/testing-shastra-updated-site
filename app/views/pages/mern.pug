@@ -357,22 +357,7 @@ head
     script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
     script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
     script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
-    script.
-      myButton = document.getElementById("myBtn");
-        window.onscroll = function () { scrollFunction() };
-        //when user scroll down 50px from top then it wil show the but
-        function scrollFunction() {
-          if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
-            myButton.style.display = "block";
-          } else {
-            myButton.style.display = "none";
-          }
-        }
-        //when the user click on the btn ,scroll to top of the document
-        function topFunction() {
-          document.body.scrollTop = 0;
-          document.documentElement.scrollTop = 0;
-        }
+
 
 
 
