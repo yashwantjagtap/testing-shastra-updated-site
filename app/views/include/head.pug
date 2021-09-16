@@ -41,6 +41,9 @@
     .site-description {
       color: #1e73be;
     }
+    .error{
+      color:red
+    }
   script.
     window.onscroll = function() {scrollFunction()};
       function scrollFunction() {
@@ -58,9 +61,11 @@
       window.onscroll = function () { scrollFunction() };
       function scrollFunction() {
         if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
-          myButton.style.display = "block";
+          if(myButton !== null)
+            myButton.style.display = "block";
         } else {
-          myButton.style.display = "none";
+          if(myButton !== null)
+            myButton.style.display = "none";
         }
       }
       function topFunction() {
