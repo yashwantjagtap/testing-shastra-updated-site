@@ -3912,7 +3912,7 @@ ul#follow_us_contacts li a:hover i {
 		display: block !important;
 	}
 	.custom-logo-nav{
-		display: none;
+		display: none ;
 	}
 }
 .custom-logo-nav{
@@ -3938,4 +3938,3 @@ ul#follow_us_contacts li a:hover i {
 	border-radius: 20px;
 	cursor: pointer;
 }
-  
