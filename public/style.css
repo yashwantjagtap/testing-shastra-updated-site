@@ -81,7 +81,7 @@ a {
 }
 a:active, a:hover {
 	outline: 0;
-	color: #fff !important;
+	color: #fff ;
 	text-decoration: none !important;
 }
 abbr[title] {
@@ -1013,6 +1013,9 @@ margin: 0;
 /*=========================================
 			navigation bar position
 =============================================*/
+.main-navigation.center a:hover{
+	color: #fff !important;
+}
 .main-navigation.center{
 	text-align: center;
 	position: sticky;
@@ -3909,6 +3912,7 @@ ul#follow_us_contacts li a:hover i {
 	.mb-custom-logo-nav{
 		float: left;
 		padding: 10px 0px 0px;
+		filter: brightness(0) invert(1);
 		display: block !important;
 	}
 	.custom-logo-nav{
@@ -3919,6 +3923,7 @@ ul#follow_us_contacts li a:hover i {
 	filter: brightness(0) invert(1);
 	float: left;
 	padding: 10px 0px 7px;
+	display: block;
 }
 .mb-custom-logo-nav{
 	float: left;
@@ -3926,7 +3931,7 @@ ul#follow_us_contacts li a:hover i {
 	display: none;
 }
 #myBtn {
-	/*  display: none;*/
+	/* display: none; */
 	position: fixed;
 	bottom: 20px;
 	right: 24px;

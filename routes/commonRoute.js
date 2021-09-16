@@ -96,7 +96,7 @@ router.get("/assignments/:ass_name", function (req, res, next) {
       });
       break;
     case "Tooltip":
-      res.render("assignments/ToolTip", {
+      res.render("assignments/Tooltip", {
         title: "Testing Shastra Assignments | ToolTip",
       });
       break;
