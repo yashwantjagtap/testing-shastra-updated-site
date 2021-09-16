@@ -218,7 +218,7 @@
         <div class="col-lg-6 col-sm-6 col-md-6  right-body">
           <div class="header-text">
             <h3>register Here <br><span>for live webinar</span></h3>
-              <form action="">
+              <form id="webinarForm" method="post">
                 <div class="row">
                   <div class="col-6">
                     <div class="form-group">
@@ -239,6 +239,11 @@
                   </div>
                   <div class="col-6">
                     <div class="form-group">
+                      <input type="number" class="form-control" placeholder="Last Percentage" name="candidatePercentage">
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="form-group">
                       <input type="email" class="form-control" placeholder="Email iD" name="candidateEmailId">
                     </div>
                   </div>
@@ -246,12 +251,12 @@
                 <div class="row">
                   <div class="col-12">
                     <div class="form-group">
-                      <input type="number" class="form-control" placeholder="Institute Name" name="candidateInstituteName">
+                      <input type="text" class="form-control" placeholder="Institute Name" name="candidateInstituteName">
                     </div>
                   </div>
                 </div>
                 <div class="submit-btn">
-                  <button type="submit" class="button-updated-reg">Submit</button>
+                  <button id="webinarRegistration" type="submit" class="button-updated-reg">Submit</button>
                 </div>
               </form>
           </div>
@@ -263,5 +268,10 @@
 
 
   include ../include/footer.pug
+  script(src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js", integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q", crossorigin="anonymous")
+  script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js", integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl", crossorigin="anonymous")
+  script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js") 
+  script(src="/js/handlers/webinar.handler.js") 
 </body>
 </html>
