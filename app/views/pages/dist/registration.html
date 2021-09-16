@@ -11,7 +11,7 @@
   }
   .wrapper-div {
     padding: 100px 200px;
-    background-image: linear-gradient(138.4deg, rgba(0, 83, 219, 1) 31.5%, rgba(0, 67, 176, 1) 51.6%);
+    //- background-image: linear-gradient(138.4deg, rgba(0, 83, 219, 1) 31.5%, rgba(0, 67, 176, 1) 51.6%);
   }
   .outer-row {
     background: rgba(255, 255, 255, 0.25);
@@ -22,15 +22,15 @@
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
   .left-body {
-    background: linear-gradient(138.4deg, rgba(0, 83, 219, 1) 31.5%, rgba(0, 67, 176, 1) 51.6%);
+    background: url(/images/background/tables-right-dec.png),linear-gradient(138.4deg, rgba(0, 83, 219, 1) 31.5%, rgba(0, 67, 176, 1) 51.6%);
     color: #fff;
     padding: 50px 40px !important;
     border-radius: 10px;
-    background-image: url(/images/background/tables-right-dec.png);
+    //- background-image: url(/images/background/tables-right-dec.png);
     background-repeat: no-repeat;
     background-position: top right;
     background-size: contain;
-    filter: brightness(0) invert(1);
+    //- filter: brightness(0) invert(1);
   }
   .class-specification {
     display: flex;
@@ -74,6 +74,7 @@
     background-position: top right;
     background-repeat: no-repeat;
     background-size: contain;
+    border-radius: 40px !important;
   }
   .right-body .header-text h3 {
     padding: 20px;
@@ -200,6 +201,9 @@
   .site-description {
     color: #1e73be;
   }
+  .error{
+    color:red
+  }
 </style>
 <script>
   window.onscroll = function() {scrollFunction()};
@@ -219,9 +223,11 @@
     window.onscroll = function () { scrollFunction() };
     function scrollFunction() {
       if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
-        myButton.style.display = "block";
+        if(myButton !== null)
+          myButton.style.display = "block";
       } else {
-        myButton.style.display = "none";
+        if(myButton !== null)
+          myButton.style.display = "none";
       }
     }
     function topFunction() {
@@ -239,27 +245,27 @@
 </div>
 <div class="header_social_link">
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://m.facebook.com/ts.avinashpingale/">
 <span class="fa_wrap"> <i class="fa fa-facebook"></i> </span>
 <div class="link_wrap">facebook</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
-<span class="fa_wrap"> <i class="fa fa-twitter"></i> </span>
-<div class="link_wrap">twitter</div>
+<a target="_blank" href="https://wa.link/ab48p9">
+<span class="fa_wrap"> <i class="fa fa-whatsapp"></i> </span>
+<div class="link_wrap">whats'app</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://www.linkedin.com/in/testing-shastra-7960201a2">
 <span class="fa_wrap">
-<i class="fa fa-pinterest-p" aria-hidden="true"> </i>
+<i class="fa fa-linkedin-square" aria-hidden="true"> </i>
 </span>
-<div class="link_wrap">pinterest</div>
+<div class="link_wrap">linkedin</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://www.instagram.com/testingshastra/">
 <span class="fa_wrap"> <i class="fa fa-instagram"></i> </span>
 <div class="link_wrap">instagram</div>
 </a>
@@ -274,6 +280,7 @@
 <div class="header_info_wrap">
 <div class="phone_header wow fadeIn">
 <div class="fa_icon">
+<a href="tel:9130502135" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-phone" aria-hidden="true"></i>
 </div>
 <div class="title_phone">
@@ -283,15 +290,17 @@
 </div>
 <div class="email_header wow fadeIn">
 <div class="fa_icon">
+<a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-envelope-o" aria-hidden="true"></i>
 </div>
-<div class="title_email_wrap">
+<div class="title_email_wrap">  
 <span class="title_email">Email Support</span>
 <span class="email_address">info@testingshastra.com</span>
 </div>
 </div>
 <div class="location_header wow fadeIn">
 <div class="fa_icon">
+<a target="_blank" href="https://g.page/testing-shastra?share" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-map-marker" aria-hidden="true"></i>
 </div>
 <div class="title_location_wrap">
@@ -304,7 +313,7 @@
 </div>
 <nav id="site-navigation" class="main-navigation center top" role="navigation">
 <div class="ak-container">
-<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="150" height="90" src="/images/logo 1.png" class="custom-logo-nav mb-custom-logo-nav" id="mb-navLogoScroll" alt="" itemprop="logo"/></a>     
+<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="150" height="90" src="/images/logo 1.png" class="mb-custom-logo-nav" id="mb-navLogoScroll" alt="" itemprop="logo"/></a>     
 <div class="mb-ham">
 <span></span>
 <span></span>
@@ -312,7 +321,7 @@
 </div>
 <div class="menu-menu-1-container mmenu-wrapper">
 <ul id="primary-menu" class="menu">
-<img width="150" height="90" src="/images/logo 1.png" class="custom-logo-nav" id="navLogoScroll" alt="" itemprop="logo"/></a> 
+<img width="150" style="display: none;" height="90" src="/images/logo 1.png" class="custom-logo-nav" id="navLogoScroll" alt="" itemprop="logo"/></a> 
 <li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-255">
 <a href="/">Home</a>
 </li>
@@ -340,13 +349,10 @@
 <a href="/recent-placements">Recent Placements</a>
 </li>
 <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
-<a href="#">Videos</a>
+<a href="https://www.youtube.com/channel/UCg_SUG_BAPtVUvTSKse2xBg" target="_blank">Videos</a>
 </li>
 <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">
 <a href="/assignments">Assignments</a>
-</li>
-<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253">
-<a href="#">About</a>
 </li>
 <li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-242 current_page_item menu-item-251">
 <a href="/contact-us">Contact Us</a>
@@ -400,7 +406,7 @@
 <div class="col-lg-6 col-sm-6 col-md-6  right-body">
 <div class="header-text">
 <h3>register Here <br><span>for live webinar</span></h3>
-<form action="">
+<form id="webinarForm" method="post">
 <div class="row">
 <div class="col-6">
 <div class="form-group">
@@ -421,19 +427,24 @@
 </div>
 <div class="col-6">
 <div class="form-group">
-<input type="email" class="form-control" placeholder="Email iD" name="candidateEmailId">
+<input type="number" class="form-control" placeholder="Last Percentage" name="candidatePercentage">
+</div>
+</div>
+<div class="col-12">
+<div class="form-group">
+<input type="email" class="form-control" placeholder="Email ID" name="candidateEmailId">
 </div>
 </div>
 </div>
 <div class="row">
 <div class="col-12">
 <div class="form-group">
-<input type="number" class="form-control" placeholder="Institute Name" name="candidateInstituteName">
+<input type="text" class="form-control" placeholder="Institute Name" name="candidateInstituteName">
 </div>
 </div>
 </div>
 <div class="submit-btn">
-<button type="submit" class="button-updated-reg">Submit</button>
+<button id="webinarRegistration" type="submit" class="button-updated-reg">Submit</button>
 </div>
 </form>
 </div>
@@ -485,7 +496,7 @@
             <ul>
               <li><i class="fa fa-map-marker" aria-hidden="true"><a href="/contact-us">Vidya Nagar, New Sangvi, Pune</a></i></li>
               <li><i class="fa fa-phone" aria-hidden="true"><a href="tel:9130502135">+91-9130502135</a></i></li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@testingshastra.com</li>
+              <li><i class="fa fa-envelope-o" aria-hidden="true"><a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url"> info@testingshastra.com</i></li>
             </ul>
           </div>
         </div>
@@ -493,5 +504,12 @@
       <div class="footer-bottom-line"></div>
     </div>
   </div>
-</footer></body>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"> </script>
+<script src="/js/jquery-validation/jquery.validate.min.js"> </script>
+<script src="/js/jquery-validation/additional-methods.min.js"> </script>
+<script src="/js/handlers/webinar.handler.js"> </script></body>
 </html>
