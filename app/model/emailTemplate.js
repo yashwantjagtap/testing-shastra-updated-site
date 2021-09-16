@@ -282,6 +282,33 @@ var template = {
         </html>`;
     return html;
   },
+  enquiry: function (data) {
+    var message = `<p>Hello Sir/Ma'am,</p>
+                  <p>There is a new enquiry on Testing Shastra Website</p>
+                  <p>Details are as follow:</p>
+                  <table>
+                    <tbody>
+                      <tr>
+                        <td>Name</td>
+                        <td>${data.contactName}</td>
+                      </tr>
+                      <tr>
+                        <td>Email Id</td>
+                        <td>${data.contactEmailId}</td>
+                      </tr>
+                      <tr>
+                        <td>Contact Number</td>
+                        <td>${data.contactPhoneNumber}</td>
+                      </tr>
+                      <tr>
+                        <td>Enquiry Text</td>
+                        <td>${data.contactMessage}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                `;
+    return message;
+  },
 };
 
 module.exports = template;

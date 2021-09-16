@@ -179,26 +179,26 @@
 								</div>
 								<div class="contact-form-wrap">
 									<div class="ufbl-form-wrapper ufbl-default-template" style="width:100%;">
-										<form method="post" action="" class="ufbl-front-form">
-											<div class="ufbl-form-title">Contact us</div> <input type="hidden" name="form_id" value="1" class="form-id">
+										<form id="id-contact-us-form" method="post" class="ufbl-front-form">
+											<div class="ufbl-form-title">Contact us</div> 
 											<div class="ufbl-form-field-wrap ">
 												<label>Your Name</label>
 												<div class="ufbl-form-field">
-													<input type="text" name="ufbl_field_1" class="ufbl-form-textfield " data-max-chars="" data-min-chars="" data-error-message="" placeholder="" value="">
+													<input type="text" name="contactName" class="ufbl-form-textfield " data-max-chars="" data-min-chars="" data-error-message="" placeholder="" value="">
 													<div class="ufbl-error" data-error-key="ufbl_field_1"></div>
 												</div>
 											</div>
 											<div class="ufbl-form-field-wrap ">
 												<label>Email ID</label>
 												<div class="ufbl-form-field">
-													<input type="text" name="ufbl_field_1" class="ufbl-form-textfield " data-max-chars="" data-min-chars="" data-error-message="" placeholder="" value="">
+													<input type="text" name="contactEmailId" class="ufbl-form-textfield " data-max-chars="" data-min-chars="" data-error-message="" placeholder="" value="">
 													<div class="ufbl-error" data-error-key="ufbl_field_1"></div>
 												</div>
 											</div>
 											<div class="ufbl-form-field-wrap ">
 												<label>Phone Number</label>
 												<div class="ufbl-form-field">
-													<input type="text" name="ufbl_field_1" class="ufbl-form-textfield " data-max-chars="" data-min-chars="" data-error-message="" placeholder="" value="">
+													<input type="text" name="contactPhoneNumber" class="only-number ufbl-form-textfield " data-max-chars="" data-min-chars="" data-error-message="" placeholder="" value="">
 													<div class="ufbl-error" data-error-key="ufbl_field_1"></div>
 												</div>
 											</div>
@@ -207,13 +207,13 @@
 											<div class="ufbl-form-field-wrap ">
 												<label>Message</label>
 												<div class="ufbl-form-field">
-													<textarea name="ufbl_field_3" class="ufbl-form-textarea " data-max-chars="" data-min-chars="" data-error-message="" rows="5" cols="10" placeholder=""></textarea>
+													<textarea name="contactMessage" class="ufbl-form-textarea " data-max-chars="" data-min-chars="" data-error-message="" rows="5" cols="10" placeholder=""></textarea>
 													<div class="ufbl-error" data-error-key="ufbl_field_3"></div>
 												</div>
 											</div>
 											<div class="ufbl-form-field-wrap ">
 												<div class="ufbl-form-field">
-													<input type="submit" class="ufbl-form-submit" name="ufbl_field_4" value="Submit">
+													<input type="submit" id="btnSubmit" class="ufbl-form-submit" name="ufbl_field_4" value="Submit">
 													<span class="ufbl-form-loader" style="display:none"></span>
 												</div>
 											</div>
@@ -240,7 +240,11 @@
 	<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/navigation.js?ver=20151215'></script>
 	<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/skip-link-focus-fix.js?ver=20151215'></script>
 	<script type='text/javascript' src='https://demo.accesspressthemes.com/enlighten/wp-includes/js/wp-embed.min.js?ver=4.9.8'></script>
-
+	script(src="https://unpkg.com/sweetalert/dist/sweetalert.min.js") 
+	script(src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+	script(src="/js/jquery-validation/jquery.validate.min.js") 
+	script(src="/js/jquery-validation/additional-methods.min.js") 
+	script(src="/js/handlers/contact-us.handler.js")
 </body>
 
 </html>
