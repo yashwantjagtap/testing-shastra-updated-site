@@ -96,7 +96,7 @@ router.get("/assignments/:ass_name", function (req, res, next) {
       });
       break;
     case "Tooltip":
-      res.render("assignments/ToolTip", {
+      res.render("assignments/Tooltip", {
         title: "Testing Shastra Assignments | ToolTip",
       });
       break;
@@ -167,4 +167,20 @@ router.post(
       });
   }
 );
+
+router.post("/save-enquiry", function (req, res) {
+  var data = req.body;
+  var smsData = {
+    to: data.contactEmailId,
+    subject: "Enquiry On Testing Shastra",
+    message: emailTemplate.enquiry(data),
+  };
+  EmailModule.sendEmailGmail(smsData)
+    .then(function (result) {
+      res.status(200).send({ call: 1, result });
+    })
+    .catch((error) => {
+      res.status(500).send({ call: 0, error });
+    });
+});
 module.exports = router;

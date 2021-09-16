@@ -5,6 +5,10 @@ var router = require("express").Router();
 var middleware = require("./middleware");
 
 var IndexModel = require("../app/model/IndexModel");
+
+var EmailModule = require("../app/model/emailModel");
+
+var emailTemplate = require("../app/model/emailTemplate");
 /* GET home page. */
 
 
@@ -98,7 +102,7 @@ router.get("/assignments/:ass_name", function (req, res, next) {
       break;
 
     case "Tooltip":
-      res.render("assignments/ToolTip", {
+      res.render("assignments/Tooltip", {
         title: "Testing Shastra Assignments | ToolTip"
       });
       break;
@@ -138,12 +142,19 @@ router.get("/webinar-registration", function (req, res, next) {
     title: "Testing Shastra | Contact Us | Get In Touch | Address"
   });
 });
-0;
 router.post("/save-webinar-candidate", middleware.checkForPoolConnection, function (req, res) {
   var data = req.body;
   IndexModel.addNewStudent(res.pool, data).then(function (result) {
+    var smsData = {
+      to: data.candidateEmailId,
+      subject: "Testing Shastra™️ Registration For Live Webinar on Selenium 👍",
+      message: emailTemplate.webinar("".concat(data.candidateFName, " ").concat(data.candidateLName))
+    };
+    return EmailModule.sendEmailGmail(smsData);
+  }).then(function (result) {
     res.status(200).send({
-      call: 1
+      call: 1,
+      result: result
     });
   })["catch"](function (error) {
     res.status(500).send({

@@ -92,7 +92,8 @@
 <link rel="stylesheet" href="/js/superfish/superfish.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="/js/wow/animate.css" type="text/css" media="all"/>
 <link rel="stylesheet"  href="/js/youtube-video/jquery.mb.YTPlayer.css" type="text/css" media="all"/>
-<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/><script type="text/javascript" src="/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="/js/jquery/jquery-migrate.min.js" ></script>
 <script type="text/javascript" src="/js/jquery/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="/js/jquery/frontend.js"></script>
@@ -112,8 +113,35 @@
   .site-description {
     color: #1e73be;
   }
+</style>
+<script>
+  window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 00 || document.documentElement.scrollTop > 140) {
+        document.getElementById("navLogoScroll").style.display = "block";
+        //- document.getElementById("site-navigation").style.background = "#2D7FC7";
+      } else {
+        document.getElementById("navLogoScroll").style.display = "none";
+        //- document.getElementById("site-navigation").style.background = "rgb(31 57 104)";
+      }
+    }
   
-</style><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
+</script>
+<script>
+  myButton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
+        myButton.style.display = "block";
+      } else {
+        myButton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
 <link rel="icon" href="/images/Favicon.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />
 <meta name="msapplication-TileImage" content="/images/Favicon.png" />
@@ -124,27 +152,27 @@
 </div>
 <div class="header_social_link">
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://m.facebook.com/ts.avinashpingale/">
 <span class="fa_wrap"> <i class="fa fa-facebook"></i> </span>
 <div class="link_wrap">facebook</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
-<span class="fa_wrap"> <i class="fa fa-twitter"></i> </span>
-<div class="link_wrap">twitter</div>
+<a target="_blank" href="https://wa.link/ab48p9">
+<span class="fa_wrap"> <i class="fa fa-whatsapp"></i> </span>
+<div class="link_wrap">whats'app</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://www.linkedin.com/in/testing-shastra-7960201a2">
 <span class="fa_wrap">
-<i class="fa fa-pinterest-p" aria-hidden="true"> </i>
+<i class="fa fa-linkedin-square" aria-hidden="true"> </i>
 </span>
-<div class="link_wrap">pinterest</div>
+<div class="link_wrap">linkedin</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://www.instagram.com/testingshastra/">
 <span class="fa_wrap"> <i class="fa fa-instagram"></i> </span>
 <div class="link_wrap">instagram</div>
 </a>
@@ -154,11 +182,12 @@
 <div class="logo_info_wrap">
 <div class="header-logo-container">
 <a href="/" class="custom-logo-link" rel="home" itemprop="url">
-<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="Free Education WordPress Theme – Enlighten : Features Demo" itemprop="logo"/></a>
+<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="" itemprop="logo"/></a>
 </div>
 <div class="header_info_wrap">
 <div class="phone_header wow fadeIn">
 <div class="fa_icon">
+<a href="tel:9130502135" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-phone" aria-hidden="true"></i>
 </div>
 <div class="title_phone">
@@ -168,15 +197,17 @@
 </div>
 <div class="email_header wow fadeIn">
 <div class="fa_icon">
+<a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-envelope-o" aria-hidden="true"></i>
 </div>
-<div class="title_email_wrap">
+<div class="title_email_wrap">  
 <span class="title_email">Email Support</span>
 <span class="email_address">info@testingshastra.com</span>
 </div>
 </div>
 <div class="location_header wow fadeIn">
 <div class="fa_icon">
+<a target="_blank" href="https://g.page/testing-shastra?share" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-map-marker" aria-hidden="true"></i>
 </div>
 <div class="title_location_wrap">
@@ -189,6 +220,7 @@
 </div>
 <nav id="site-navigation" class="main-navigation center top" role="navigation">
 <div class="ak-container">
+<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="150" height="90" src="/images/logo 1.png" class="custom-logo-nav mb-custom-logo-nav" id="mb-navLogoScroll" alt="" itemprop="logo"/></a>     
 <div class="mb-ham">
 <span></span>
 <span></span>
@@ -196,6 +228,7 @@
 </div>
 <div class="menu-menu-1-container mmenu-wrapper">
 <ul id="primary-menu" class="menu">
+<img width="150" style="display: none;" height="90" src="/images/logo 1.png" class="custom-logo-nav" id="navLogoScroll" alt="" itemprop="logo"/></a> 
 <li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-255">
 <a href="/">Home</a>
 </li>
@@ -207,9 +240,6 @@
 </li>
 <li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
 <a href="/course/python-selenium">Automation testing (python)</a>
-</li>
-<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142">
-<a href="/course/react-js">react JS</a>
 </li>
 <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
 <a href="/course/rest-api-developer">rest api testing</a>
@@ -223,16 +253,13 @@
 </ul>
 </li>
 <li id="menu-item-363" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-363">
-<a href="/Recent_Placements">Recent Placements</a>
+<a href="/recent-placements">Recent Placements</a>
 </li>
 <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
-<a href="#">Videos</a>
+<a href="https://www.youtube.com/channel/UCg_SUG_BAPtVUvTSKse2xBg">Videos</a>
 </li>
 <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">
 <a href="/assignments">Assignments</a>
-</li>
-<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253">
-<a href="#">About</a>
 </li>
 <li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-242 current_page_item menu-item-251">
 <a href="/contact-us">Contact Us</a>
@@ -249,6 +276,7 @@
     </div>
   </div>
 </div>
+<div class="scrollTop"><i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i></div>
 <footer>
   <div class="main-footer">
     <div class="container">
@@ -256,15 +284,21 @@
         <div class="col-lg-6">
           <div class="footer-logo"><img src="/images/background/ts text (1).png" alt="alt"/></div>
           <div class="footer-text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, tempora modi? Rerum, distinctio. Quasi eos explicabo unde voluptates quod minus deserunt optio provident nobis dolorum!</p>
+            <p>Testing Shastra is Pune based leading Software Training Institute. We are committed to provide best in market training with 100% placement guarantee.</p>
           </div>
           <div class="footer-social-link">
             <div class="footer-social-media">
               <ul>
-                <li><i class="fa fa-linkedin-square"></i></li>
-                <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
-                <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-              </ul><span class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img src="/images/background/play-store.png" alt="alt"/></a></span>
+                <li><a href="https://www.linkedin.com/in/testing-shastra-7960201a2" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://m.facebook.com/ts.avinashpingale/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/testingshastra/" target="blank">   <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCg_SUG_BAPtVUvTSKse2xBg" target="blank">
+                       <i class="fa fa-youtube-square" aria-hidden="true"></i>    </a></li>
+              </ul>
+            </div>
+            <div class="play-store-app-list"> 
+              <div class="play-store"><a href="https://apps.apple.com/in/app/classplus/id1324522260" target="blank"><img class="app-logo" src="/images/background/app-store.png" alt="alt"/></a></div>
+              <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/google-play.png" alt="alt"/></a></div>
             </div>
           </div>
         </div>
@@ -272,11 +306,11 @@
           <div class="footer-course">
             <h3>OUR COURSES</h3>
             <ul>
-              <li>Automation Testing-Java</li>
-              <li>Java Full Stack Development</li>
-              <li>Automation Testing-Python</li>
-              <li>Angular 8</li>
-              <li>MERN Stack Development </li>
+              <li> <a href="/course/automation-testing"> Automation testing (java)</a></li>
+              <li> <a href="/course/python-selenium">Automation testing (python)</a></li>
+              <li> <a href="/course/rest-api-developer">rest api testing</a></li>
+              <li><a href="/course/java-full-stack">Java Full-Stack development</a></li>
+              <li> <a href="/course/mern-stack">mern stack development</a></li>
             </ul>
           </div>
         </div>
@@ -284,9 +318,9 @@
           <div class="footer-contact">
             <h3>CONTACT</h3>
             <ul>
-              <li><i class="fa fa-map-marker" aria-hidden="true"></i> Vidya Nagar, New Sangvi, Pune</li>
-              <li><i class="fa fa-phone" aria-hidden="true"></i> +91-9130502135</li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@testingshastra.com</li>
+              <li><i class="fa fa-map-marker" aria-hidden="true"><a href="/contact-us">Vidya Nagar, New Sangvi, Pune</a></i></li>
+              <li><i class="fa fa-phone" aria-hidden="true"><a href="tel:9130502135">+91-9130502135</a></i></li>
+              <li><i class="fa fa-envelope-o" aria-hidden="true"><a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url"> info@testingshastra.com</i></li>
             </ul>
           </div>
         </div>

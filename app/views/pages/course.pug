@@ -92,7 +92,8 @@ head
 										li online
 										li weekend batch
 										li regular batch
-										li syllabus 
+										li 
+											a(href="#syllabusBtn") syllabus  
 											i.fa.fa-chevron-down(aria-hidden="true")
 							.course-benefits
 								h4.benefits-head course-benefits
@@ -129,7 +130,7 @@ head
 										li Source Code Management using GitHub
 										li CI/CD using Jenkins
 										li Agile Scrum Methodology
-								.syllabus-body 
+								.syllabus-body#syllabusBtn 
 									h3 Core Java 
 									.after-affect-1
 									.syllabus-list
@@ -248,7 +249,7 @@ head
 								.download-syllabus   
 									//- a(href="../public/images/syllabus/Java-Selenium2020 Syllabus" download)	download syllabus
 									//- 	button download 
-									a(href="../public/images/syllabus/Java_Selenium2020_Syllabus" download ="Java_Selenium2020_Syllabus.pdf") download syllabus  
+									a(href="/images/syllabus/Java_Selenium_2020 Syllabus.pdf" download ="Java_Selenium2020_Syllabus.pdf") download syllabus  
 										<i class="fa fa-download" aria-hidden="true"></i>
 
 					.col-lg-4
@@ -346,11 +347,12 @@ head
 	include ../include/footer.pug
 
 
-		link#enlighten-lite-dynamic-fonts-css(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato%7CTitillium+Web%7COpen+Sans&ver=4.9.8", type="text/css", media="all")
-		script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.3")
-		script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/navigation.js?ver=20151215")
-		script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/skip-link-focus-fix.js?ver=20151215")
-		script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-includes/js/wp-embed.min.js?ver=4.9.8")
-		script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js")
-		script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
-		script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+	link#enlighten-lite-dynamic-fonts-css(rel="stylesheet", href="https://fonts.googleapis.com/css?family=Lato%7CTitillium+Web%7COpen+Sans&ver=4.9.8", type="text/css", media="all")
+	script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=5.0.3")
+	script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/navigation.js?ver=20151215")
+	script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-content/themes/enlighten/js/skip-link-focus-fix.js?ver=20151215")
+	script(type="text/javascript", src="https://demo.accesspressthemes.com/enlighten/wp-includes/js/wp-embed.min.js?ver=4.9.8")
+	script(src="https://code.jquery.com/jquery-3.6.0.min.js"  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous")
+	script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js")
+	script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js")
+	script(src="/js/handlers/contact-us.handler.js")
