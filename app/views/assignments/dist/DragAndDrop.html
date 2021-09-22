@@ -1,6 +1,9 @@
-<!DOCTYPE html>
-<html lang="en-US">
-<title></title><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"><head>
+<!doctype html>
+<html lang="en">
+<head>
+<title>jQuery UI Droppable - Simple photo manager</title>
+<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="/resources/demos/style.css"><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
@@ -13,7 +16,8 @@
 <link rel="stylesheet" href="/js/superfish/superfish.css" type="text/css" media="all"/>
 <link rel="stylesheet" href="/js/wow/animate.css" type="text/css" media="all"/>
 <link rel="stylesheet"  href="/js/youtube-video/jquery.mb.YTPlayer.css" type="text/css" media="all"/>
-<script type="text/javascript" src="/js/jquery/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css"/><script type="text/javascript" src="/js/jquery/jquery.js"></script>
 <script type="text/javascript" src="/js/jquery/jquery-migrate.min.js" ></script>
 <script type="text/javascript" src="/js/jquery/jquery.bxslider.min.js"></script>
 <script type="text/javascript" src="/js/jquery/frontend.js"></script>
@@ -33,39 +37,240 @@
   .site-description {
     color: #1e73be;
   }
+  .error{
+    color:red
+  }
+</style>
+<script>
+  window.onscroll = function() {scrollFunction()};
+    function scrollFunction() {
+      if (document.body.scrollTop > 00 || document.documentElement.scrollTop > 140) {
+        document.getElementById("navLogoScroll").style.display = "block";
+        //- document.getElementById("site-navigation").style.background = "#2D7FC7";
+      } else {
+        document.getElementById("navLogoScroll").style.display = "none";
+        //- document.getElementById("site-navigation").style.background = "rgb(31 57 104)";
+      }
+    }
   
-</style><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
+</script>
+<script>
+  myButton = document.getElementById("myBtn");
+    window.onscroll = function () { scrollFunction() };
+    function scrollFunction() {
+      if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
+        if(myButton !== null)
+          myButton.style.display = "block";
+      } else {
+        if(myButton !== null)
+          myButton.style.display = "none";
+      }
+    }
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+</script><link rel="icon" href="/i/mages/Favicon.png" sizes="32x32" />
 <link rel="icon" href="/images/Favicon.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />
 <meta name="msapplication-TileImage" content="/images/Favicon.png" />
-</head><div class="ak-container">
+</head>
+<style>
+  #gallery {
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    margin:0px;
+  }
+  #gallery li{
+    padding:10px 5px; 
+    margin: 0px 5px;
+  
+  }
+  #gallery li h5 {
+    background: #2D7FC7;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px 5px;
+    font-weight: 100;
+  }
+  #trash ul{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+    padding:10px
+  }
+  #trash h4{
+    padding:20px ; 
+    color:#fff;
+    padding:15px ;
+    background-color:#2D7FC7;
+  }
+  #trash span{
+    color:#fff;
+    filter:brightness(0),invert()
+  }
+  .gallery.custom-state-active { background: #eee; }
+  .gallery li h5 { margin: 0 0 0.4em; cursor: move; }
+  .gallery li a {  }
+  .gallery li a.ui-icon-zoomin {  }
+  .gallery li img { width: 100%; cursor: move; }
+  
+  #trash { width: 100%; min-height: 18em; padding: 3%; }
+  #trash h4 { line-height: 16px; margin: 0 0 0.4em; }
+  #trash h4 .ui-icon { }
+  #trash .gallery h5 { display: none; }
+  
+  
+  .outer{
+    padding:80px 20px;
+  }
+</style><script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $( function() {
+  
+    // There's the gallery and the trash
+    var $gallery = $( "#gallery" ),
+      $trash = $( "#trash" );
+  
+    // Let the gallery items be draggable
+    $( "li", $gallery ).draggable({
+      cancel: "a.ui-icon", // clicking an icon won't initiate dragging
+      revert: "invalid", // when not dropped, the item will revert back to its initial position
+      containment: "document",
+      helper: "clone",
+      cursor: "move"
+    });
+  
+    // Let the trash be droppable, accepting the gallery items
+    $trash.droppable({
+      accept: "#gallery > li",
+      classes: {
+        "ui-droppable-active": "ui-state-highlight"
+      },
+      drop: function( event, ui ) {
+        deleteImage( ui.draggable );
+      }
+    });
+  
+    // Let the gallery be droppable as well, accepting items from the trash
+    $gallery.droppable({
+      accept: "#trash li",
+      classes: {
+        "ui-droppable-active": "custom-state-active"
+      },
+      drop: function( event, ui ) {
+        recycleImage( ui.draggable );
+      }
+    });
+  
+    // Image deletion function
+    var recycle_icon = "<a href='link/to/recycle/script/when/we/have/js/off' title='Recycle this image' class='ui-icon ui-icon-refresh'>Recycle image</a>";
+    function deleteImage( $item ) {
+      $item.fadeOut(function() {
+        var $list = $( "ul", $trash ).length ?
+          $( "ul", $trash ) :
+          $( "<ul class='gallery ui-helper-reset'/>" ).appendTo( $trash );
+  
+        $item.find( "a.ui-icon-trash" ).remove();
+        $item.append( recycle_icon ).appendTo( $list ).fadeIn(function() {
+          $item
+            .animate({ width: "180px" })
+            .find( "img" )
+              .animate({ height: "150px" });
+        });
+      });
+    }
+  
+    // Image recycle function
+    var trash_icon = "<a href='link/to/trash/script/when/we/have/js/off' title='Delete this image' class='ui-icon ui-icon-trash'>Delete image</a>";
+    function recycleImage( $item ) {
+      $item.fadeOut(function() {
+        $item
+          .find( "a.ui-icon-refresh" )
+            .remove()
+          .end()
+          .css( "width", "50%")
+          .append( trash_icon )
+          .find( "img" )
+            .css( "height", "100%" )
+          .end()
+          .appendTo( $gallery )
+          .fadeIn();
+      });
+    }
+  
+    // Image preview function, demonstrating the ui.dialog used as a modal window
+    function viewLargerImage( $link ) {
+      var src = $link.attr( "href" ),
+        title = $link.siblings( "img" ).attr( "alt" ),
+        $modal = $( "img[src$='" + src + "']" );
+  
+      if ( $modal.length ) {
+        $modal.dialog( "open" );
+      } else {
+        var img = $( "<img alt='" + title + "' width='384' height='288' style='display: none; padding: 8px;' />" )
+          .attr( "src", src ).appendTo( "body" );
+        setTimeout(function() {
+          img.dialog({
+            title: title,
+            width: 400,
+            modal: true
+          });
+        }, 1 );
+      }
+    }
+  
+    // Resolve the icons behavior with event delegation
+    $( "ul.gallery > li" ).on( "click", function( event ) {
+      var $item = $( this ),
+        $target = $( event.target );
+  
+      if ( $target.is( "a.ui-icon-plus" ) ) {
+        deleteImage( $item );
+      } else if ( $target.is( "a.ui-icon-zoomin" ) ) {
+        viewLargerImage( $target );
+      } else if ( $target.is( "a.ui-icon-refresh" ) ) {
+        recycleImage( $item );
+      }
+  
+      return false;
+    });
+  } );
+</script></head>
+<body><div class="ak-container">
 <div class="social_htext_wrap">
 <div class="header_text">
 <span class="text_wrap">Join with us and be a part of the success</span>
 </div>
 <div class="header_social_link">
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://m.facebook.com/ts.avinashpingale/">
 <span class="fa_wrap"> <i class="fa fa-facebook"></i> </span>
 <div class="link_wrap">facebook</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
-<span class="fa_wrap"> <i class="fa fa-twitter"></i> </span>
-<div class="link_wrap">twitter</div>
+<a target="_blank" href="https://wa.link/ab48p9">
+<span class="fa_wrap"> <i class="fa fa-whatsapp"></i> </span>
+<div class="link_wrap">whats'app</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://www.linkedin.com/in/testing-shastra-7960201a2">
 <span class="fa_wrap">
-<i class="fa fa-pinterest-p" aria-hidden="true"> </i>
+<i class="fa fa-linkedin-square" aria-hidden="true"> </i>
 </span>
-<div class="link_wrap">pinterest</div>
+<div class="link_wrap">linkedin</div>
 </a>
 </div>
 <div class="fa_link_wrap">
-<a target="_blank" href="#">
+<a target="_blank" href="https://www.instagram.com/testingshastra/">
 <span class="fa_wrap"> <i class="fa fa-instagram"></i> </span>
 <div class="link_wrap">instagram</div>
 </a>
@@ -75,11 +280,12 @@
 <div class="logo_info_wrap">
 <div class="header-logo-container">
 <a href="/" class="custom-logo-link" rel="home" itemprop="url">
-<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="Free Education WordPress Theme – Enlighten : Features Demo" itemprop="logo"/></a>
+<img width="259" height="70" src="/images/logo 1.png" class="custom-logo" alt="" itemprop="logo"/></a>
 </div>
 <div class="header_info_wrap">
 <div class="phone_header wow fadeIn">
 <div class="fa_icon">
+<a href="tel:9130502135" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-phone" aria-hidden="true"></i>
 </div>
 <div class="title_phone">
@@ -89,15 +295,17 @@
 </div>
 <div class="email_header wow fadeIn">
 <div class="fa_icon">
+<a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-envelope-o" aria-hidden="true"></i>
 </div>
-<div class="title_email_wrap">
+<div class="title_email_wrap">  
 <span class="title_email">Email Support</span>
 <span class="email_address">info@testingshastra.com</span>
 </div>
 </div>
 <div class="location_header wow fadeIn">
 <div class="fa_icon">
+<a target="_blank" href="https://g.page/testing-shastra?share" class="custom-logo-link" rel="home" itemprop="url">
 <i class="fa fa-map-marker" aria-hidden="true"></i>
 </div>
 <div class="title_location_wrap">
@@ -110,6 +318,7 @@
 </div>
 <nav id="site-navigation" class="main-navigation center top" role="navigation">
 <div class="ak-container">
+<a href="/" class="custom-logo-link" rel="home" itemprop="url"><img width="150" height="90" src="/images/logo 1.png" class="mb-custom-logo-nav" id="mb-navLogoScroll" alt="" itemprop="logo"/></a>     
 <div class="mb-ham">
 <span></span>
 <span></span>
@@ -117,6 +326,7 @@
 </div>
 <div class="menu-menu-1-container mmenu-wrapper">
 <ul id="primary-menu" class="menu">
+<img width="150" style="display: none;" height="90" src="/images/logo 1.png" class="custom-logo-nav" id="navLogoScroll" alt="" itemprop="logo"/></a> 
 <li id="menu-item-255" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-255">
 <a href="/">Home</a>
 </li>
@@ -128,9 +338,6 @@
 </li>
 <li id="menu-item-141" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-141">
 <a href="/course/python-selenium">Automation testing (python)</a>
-</li>
-<li id="menu-item-142" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-142">
-<a href="/course/react-js">react JS</a>
 </li>
 <li id="menu-item-143" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-143">
 <a href="/course/rest-api-developer">rest api testing</a>
@@ -144,16 +351,13 @@
 </ul>
 </li>
 <li id="menu-item-363" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-363">
-<a href="/Recent_Placements">Recent Placements</a>
+<a href="/recent-placements">Recent Placements</a>
 </li>
 <li id="menu-item-353" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-353">
-<a href="#">Videos</a>
+<a href="https://www.youtube.com/channel/UCg_SUG_BAPtVUvTSKse2xBg" target="_blank">Videos</a>
 </li>
 <li id="menu-item-354" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-354">
 <a href="/assignments">Assignments</a>
-</li>
-<li id="menu-item-253" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-253">
-<a href="#">About</a>
 </li>
 <li id="menu-item-251" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-242 current_page_item menu-item-251">
 <a href="/contact-us">Contact Us</a>
@@ -162,47 +366,44 @@
 </div>
 </div>
 </nav>
-<style>
-  .outer-div{
-    text-align:center;   
-    height:50vh; 
-  
-    margin:auto;  
-  }
-  .sub-text{
-    font-size:1.5em;
-    margin-top:3em;
-  }
-  #div1 {
-    width: 400px;
-    height: 90px;
-    border: 2px solid #aaaaaa;
-    padding:5px;
-    margin:auto;
-  
-  }
-</style><body>  
-<div class= "outer-div">
-<p class ="sub-text">Drag the Testing Shastra image into the rectangle:</p>
-<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
-<img id="drag1" src="/logo.png" draggable="true" ondragstart="drag(event)" width="336" height="69">
+<div class="container outer">
+  <div class="row">
+    <div class="col-6"><div class="ui-widget ui-helper-clearfix">
+<ul id="gallery" class="gallery ui-helper-reset ui-helper-clearfix"> 
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Java full stack Development</h5>
+<img src="/images/java-fullstack.png" alt="The peaks of High Tatras" width="96" height="72">
+<a href="/images/java-fullstack.png" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+<a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-plus">Delete image</a>
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Automation testing (java) </h5>
+<img src="/images/java-selenium.png" alt="The chalet at the Green mountain lake" width="96" height="72">
+<a href="/images/java-selenium.png" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+<a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-plus">Delete image</a>
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">Automation testing (Python)</h5>
+<img src="/images/Python-Selenium.png" alt="Planning the ascent" width="196" height="172">
+<a href="/images/Python-Selenium.png" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+<a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-plus">Delete image</a>
+</li>
+<li class="ui-widget-content ui-corner-tr">
+<h5 class="ui-widget-header">MERN full Stack Development</h5>
+<img src="/images/MERN-Stack-Development.jpg" alt="On top of Kozi kopka" width="96" height="72">
+<a href="/images/MERN-Stack-Development.jpg" title="View larger image" class="ui-icon ui-icon-zoomin">View larger</a>
+<a href="link/to/trash/script/when/we/have/js/off" title="Delete this image" class="ui-icon ui-icon-plus">Delete image</a>
+</li>
+</ul>
+</div>  
+    </div>
+    <div class="col-6"><div id="trash" class="ui-widget-content ui-state-default">
+<h4 class="ui-widget-header"><span class="ui-icon ui-icon-plus">add course</span> Add Course</h4>
 </div>
-<script>
-  function allowDrop(ev) {
-    ev.preventDefault();
-  }
-  
-  function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-  }
-  
-  function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-  }
-  
-</script>
+    </div>
+  </div>
+</div>
+<div class="scrollTop"><i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i></div>
 <footer>
   <div class="main-footer">
     <div class="container">
@@ -210,15 +411,21 @@
         <div class="col-lg-6">
           <div class="footer-logo"><img src="/images/background/ts text (1).png" alt="alt"/></div>
           <div class="footer-text">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Maiores, tempora modi? Rerum, distinctio. Quasi eos explicabo unde voluptates quod minus deserunt optio provident nobis dolorum!</p>
+            <p>Testing Shastra is Pune based leading Software Training Institute. We are committed to provide best in market training with 100% placement guarantee.</p>
           </div>
           <div class="footer-social-link">
             <div class="footer-social-media">
               <ul>
-                <li><i class="fa fa-linkedin-square"></i></li>
-                <li><i class="fa fa-facebook-square" aria-hidden="true"></i></li>
-                <li><i class="fa fa-instagram" aria-hidden="true"></i></li>
-              </ul><span class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img src="/images/background/play-store.png" alt="alt"/></a></span>
+                <li><a href="https://www.linkedin.com/in/testing-shastra-7960201a2" target="blank"><i class="fa fa-linkedin-square"></i></a></li>
+                <li><a href="https://m.facebook.com/ts.avinashpingale/" target="blank"><i class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.instagram.com/testingshastra/" target="blank">   <i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                <li><a href="https://www.youtube.com/channel/UCg_SUG_BAPtVUvTSKse2xBg" target="blank">
+                       <i class="fa fa-youtube-square" aria-hidden="true"></i>    </a></li>
+              </ul>
+            </div>
+            <div class="play-store-app-list"> 
+              <div class="play-store"><a href="https://apps.apple.com/in/app/classplus/id1324522260" target="blank"><img class="app-logo" src="/images/background/app-store.png" alt="alt"/></a></div>
+              <div class="play-store"><a href="https://play.google.com/store/apps/details?id=co.khal.uvsug" target="blank"><img class="app-logo" src="/images/background/google-play.png" alt="alt"/></a></div>
             </div>
           </div>
         </div>
@@ -226,11 +433,11 @@
           <div class="footer-course">
             <h3>OUR COURSES</h3>
             <ul>
-              <li>Automation Testing-Java</li>
-              <li>Java Full Stack Development</li>
-              <li>Automation Testing-Python</li>
-              <li>Angular 8</li>
-              <li>MERN Stack Development </li>
+              <li> <a href="/course/automation-testing"> Automation testing (java)</a></li>
+              <li> <a href="/course/python-selenium">Automation testing (python)</a></li>
+              <li> <a href="/course/rest-api-developer">rest api testing</a></li>
+              <li><a href="/course/java-full-stack">Java Full-Stack development</a></li>
+              <li> <a href="/course/mern-stack">mern stack development</a></li>
             </ul>
           </div>
         </div>
@@ -238,9 +445,9 @@
           <div class="footer-contact">
             <h3>CONTACT</h3>
             <ul>
-              <li><i class="fa fa-map-marker" aria-hidden="true"></i> Vidya Nagar, New Sangvi, Pune</li>
-              <li><i class="fa fa-phone" aria-hidden="true"></i> +91-9130502135</li>
-              <li><i class="fa fa-envelope-o" aria-hidden="true"></i> info@testingshastra.com</li>
+              <li><i class="fa fa-map-marker" aria-hidden="true"><a href="/contact-us">Vidya Nagar, New Sangvi, Pune</a></i></li>
+              <li><i class="fa fa-phone" aria-hidden="true"><a href="tel:9130502135">+91-9130502135</a></i></li>
+              <li><i class="fa fa-envelope-o" aria-hidden="true"><a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url"> info@testingshastra.com</i></li>
             </ul>
           </div>
         </div>
