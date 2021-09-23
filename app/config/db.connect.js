@@ -2,10 +2,10 @@ var mysql = require("mysql2"); // node-mysql2 module
 var myConnection = require("express-myconnection"), // express-myconnection module
   dbOptions = {
     host: "localhost",
-    user: "root",
-    password: "",
+    user: "rxgvbcbw_testing_shastra",
+    password: "Omsairam@800",
     port: 3306,
-    database: "testing_shastra",
+    database: "rxgvbcbw_testing_shastra",
   };
 
 exports.myConnection = myConnection;
