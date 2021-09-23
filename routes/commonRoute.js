@@ -14,6 +14,12 @@ router.get("/assignments", function (req, res, next) {
   });
 });
 
+router.get("/notes", function (req, res, next) {
+  res.render("pages/notes", {
+    title: "Testing Shastra | Programs | Notes",
+  });
+});
+
 router.get("/contact-us", function (req, res, next) {
   res.render("pages/contact_us", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address",

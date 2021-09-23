@@ -22,6 +22,11 @@ router.get("/assignments", function (req, res, next) {
     title: "Testing Shastra | Programs | Assignment"
   });
 });
+router.get("/notes", function (req, res, next) {
+  res.render("pages/notes", {
+    title: "Testing Shastra | Programs | Notes"
+  });
+});
 router.get("/contact-us", function (req, res, next) {
   res.render("pages/contact_us", {
     title: "Testing Shastra | Contact Us | Get In Touch | Address"
@@ -152,6 +157,25 @@ router.post("/save-webinar-candidate", middleware.checkForPoolConnection, functi
     };
     return EmailModule.sendEmailGmail(smsData);
   }).then(function (result) {
+    res.status(200).send({
+      call: 1,
+      result: result
+    });
+  })["catch"](function (error) {
+    res.status(500).send({
+      call: 0,
+      error: error
+    });
+  });
+});
+router.post("/save-enquiry", function (req, res) {
+  var data = req.body;
+  var smsData = {
+    to: data.contactEmailId,
+    subject: "Enquiry On Testing Shastra",
+    message: emailTemplate.enquiry(data)
+  };
+  EmailModule.sendEmailGmail(smsData).then(function (result) {
     res.status(200).send({
       call: 1,
       result: result
