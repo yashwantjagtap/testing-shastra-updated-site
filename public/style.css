@@ -3589,7 +3589,7 @@ ul#follow_us_contacts li a:hover i {
 
 }
 #header_slider_wrap .header_slider .webinar-slider .bg-absolute-left .register{
-	margin: 3em 0 0 0em !important;
+	margin: 1em 0 0 0em !important;
 }
 #header_slider_wrap .header_slider .webinar-slider .bg-absolute-left .register button{
 	background-color: #2D7FC7;
@@ -3601,7 +3601,7 @@ ul#follow_us_contacts li a:hover i {
 	padding: 5px 30px;
 	text-transform: capitalize;
 	box-shadow:none;
-	width: 30%;
+	width: 20%;
 	text-shadow: none !important;
 }
 
