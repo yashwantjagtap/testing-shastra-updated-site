@@ -9,10 +9,10 @@ module.exports = {
         pool: true,
         host: "mail.testingshastra.com",
         port: 465,
-        secure: true, // upgrade later with STARTTLS
+        secure: true, // upxgrade later with STARTTLS
         auth: {
           user: gmailU,
-          pass: "Omsairam@800",
+          pass: "Insecure@123",
         },
       });
 
