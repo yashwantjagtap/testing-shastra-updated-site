@@ -3,16 +3,16 @@ var nodemailer = require("nodemailer");
 module.exports = {
   sendEmailGmail: function (data) {
     return new Promise(function (resolve, reject) {
-      var gmailU = "info@testingshastra.com";
+      var gmailU = "admissions@testingshastra.com";
 
       var transporter = nodemailer.createTransport({
         pool: true,
-        host: "admissions@testingshastra.com",
+        host: "mail.testingshastra.com",
         port: 465,
         secure: true, // upgrade later with STARTTLS
         auth: {
           user: gmailU,
-          pass: "Insecure@123",
+          pass: "Omsairam@800",
         },
       });
 
