@@ -34,6 +34,9 @@
     .site-description {
       color: #1e73be;
     }
+    .error{
+      color:red
+    }
   </style>
   <script>
     window.onscroll = function() {scrollFunction()};
@@ -53,9 +56,11 @@
       window.onscroll = function () { scrollFunction() };
       function scrollFunction() {
         if (document.body.onscroll > 50 || document.documentElement.scrollTop > 20) {
-          myButton.style.display = "block";
+          if(myButton !== null)
+            myButton.style.display = "block";
         } else {
-          myButton.style.display = "none";
+          if(myButton !== null)
+            myButton.style.display = "none";
         }
       }
       function topFunction() {
@@ -197,7 +202,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8">
-          <div id="enlighten-breadcrumb"><a href="/">Home  > <span class="current">Cours  > </span><span class="current">React</span></a></div>
+          <div id="enlighten-breadcrumb"><a href="/">Home  > <span class="current">Course  > </span><span class="current">React</span></a></div>
           <div class="course-introduction">
             <p class="course-title">Java Full Stack developer</p>
             <div class="course-rating"><span><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star" aria-hidden="true"></i><i class="fa fa-star-half-o" aria-hidden="true"></i></span>355 Ratings<span>3065 Learners</span></div>
