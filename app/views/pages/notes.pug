@@ -127,19 +127,29 @@
 			h6 {
 				font-family: Titillium Web;
 			}
+			.sub-title{
+				color:#000;
+				text-transform: none;
+				font-family:"Lato";
+			}
 
 			.main-navigation a {
 				font-family: Open Sans;
 			}
-			.assignment-list >ul{
+			.notes-list >ul{
 				margin-top:30px;
 			}			
-			.assignment-list >ul>li {
+			.notes-list >ul>li {
 				margin-top:10px;
 				font-size:15px;
+				border-top :1px solid lightgray;
+				padding:5px 0px;
+				list-style:none;
 			}
-			.assignment-list> ul>li>a:hover{
-				color:#000000;	
+			.notes-list> ul>li>a:hover{
+				color:#000;
+				cursor:pointer;
+				text-decoration-line: underline;
 			}	
 			.header-banner-container:after{
 				background:#f3f3f3;
@@ -156,31 +166,82 @@
 			}
 			a:hover{
 				color:#2d7fc7 ! important;
-			}	
+				text-decoration-line:underline;
+			}
+
+			.interview-questions-list>p{
+				text-align:center;
+				font-weight:bold;
+				color:black;
+				text-decoration-line:underline;
+			}
+			.interview-questions-list ul{
+				margin-top:30px;
+				margin-bottom:10px;
+			}			
+			.interview-questions-list ul>li {
+				font-size:15px;
+				padding:15px 0px;
+				color:red;	
+				list-style-type: decimal;
+		
+			}
+			.interview-questions-list ul>li>a:hover{
+				color:#000;
+				cursor:pointer;
+				text-decoration-line: underline;
+			}
 
 		<div id="page" class="site">
 			<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
 			<header id="masthead" class="site-header" role="banner">
 				include ../include/nav.pug
 			</header><!-- #masthead -->
-			<p>THis is notes page</p>
+			
 			<div class="header-banner-container">
 				<div class="ak-container">
 					<div class="page-title-wrap">
 						<div class="outer-div">
-							<h1 class="page-title" style="color:#000">Assignments</h1>
-							<div id="enlighten-breadcrumb" style="color:#000"><a href="/" style="color:#000">Home</a> &gt; <span class="current">Assignments</span></div>
-							<div class="assignment-list" >
-							<ul type="disc" id="ul-style">	
-								<li><a  href="/assignments/confirmation-alert">confirmation alert</a></li>
-								<li><a  href="/assignments/prompt"> prompt alert</a></li>
-								<li><a  href="/assignments/simple-alert"> simple alert</a></li>
-								<li><a  href="/assignments/windowHandlingDemo">Window Handling Demo</a></li>
-								<li><a  href="/assignments/parent-window">Frame Handling Demo</a></li>
-								<li><a  href="/assignments/drag-and-drop">Drag And Drop Assignment</a></li>	
-								<li><a  href="/assignments/drop-down">DropDown List Assignment</a></li>
-								<li><a  href="/assignments/Tooltip">ToolTip Assignment</a></li>
-							</ul>
+							//- <h1 class="page-title" style="color:#000">Downloads</h1>
+							
+							<div id="enlighten-breadcrumb" style="color:#000"><a href="/" style="color:#000">Home</a> &gt; <span class="current">Notes</span></div>
+							<h4 class="sub-title">Notes and Interview Questions for Professionals</h4>
+							<div class="notes-list" >
+								<ul type="disc" id="ul-style">	
+									<li><strong>Notes</strong></li>
+									<li><a  href="../notes/java-basics.pdf" target="_blank">Java Basics</a></li>
+									<li><a  href="../notes/array.pdf" target="_blank">Array</a></li>
+									<li><a  href="../notes/string_stringbuffer_stringbuilder.pdf" target="_blank">String, StringBuffer, StringBuilder</a></li>
+									<li><a  href="../notes/oops-concepts.pdf" target="_blank">OOP Concepts</a></li>
+									<li><a  href="../notes/exception-handling.pdf" target="_blank">Exception Handling</a></li>
+									<li><a  href="../notes/collection-framework-new.pdf" target="_blank">Collection API</a></li>	
+									<li><a  href="../notes/map.pdf" target="_blank">Map in Java</a></li>
+									<li><a  href="../notes/jxl-api.pdf" target="_blank">JXL API</a></li>
+									<li><a  href="../notes/waits-in-selenium.pdf" target="_blank">Waits in Selenium</a></li>
+									<li><strong>Assignments</strong></li>
+									<li><a  href="../notes/string-assignment.pdf" target="_blank">String Assignments</a></li>
+								</ul>
+								<hr>
+							</div>
+
+							<div class="interview-questions-list">
+								<p>Company wise Interview Questions</p>
+								<ul class="qp-list">	
+									<li><a  href="../interview_questions/bosch.pdf" target="_blank">Bosch</a></li>
+									<li><a  href="../interview_questions/capgemini.pdf" target="_blank">Capgemini</a></li>
+									<li><a  href="../interview_questions/capgemini_1.pdf" target="_blank">Capgemini_1</a></li>
+									<li><a  href="../interview_questions/carpro.pdf" target="_blank">CarPro</a></li>
+									<li><a  href="../interview_questions/cassiopae.pdf" target="_blank">Cassiopae</a></li>
+									<li><a  href="../interview_questions/fss-tech.pdf" target="_blank">FSS Tech</a></li>	
+									<li><a  href="../interview_questions/honeywell.pdf" target="_blank">Honeywell</a></li>
+									<li><a  href="../interview_questions/infostrech.pdf" target="_blank">InfoStrech</a></li>
+									<li><a  href="../interview_questions/nihilent.pdf" target="_blank">Nihilent</a></li>
+								</ul>
+							
+								<p>Topic wise Interview Questions</p>
+								<ul class="qp-list">
+									<li><a  href="../interview_questions/cucumber-interview-questions.pdf" target="_blank">Cucumber Interview Question Answers</a></li>
+								</ul>
 							</div>
 						</div>	
 					</div>	
