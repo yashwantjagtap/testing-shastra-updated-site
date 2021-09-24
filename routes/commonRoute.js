@@ -3,6 +3,7 @@ var middleware = require("./middleware");
 var IndexModel = require("../app/model/IndexModel");
 var EmailModule = require("../app/model/emailModel");
 var emailTemplate = require("../app/model/emailTemplate");
+
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Testing Shastra | Training | Placement" });
