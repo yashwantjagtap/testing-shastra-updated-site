@@ -147,7 +147,7 @@ router.post("/save-webinar-candidate", middleware.checkForPoolConnection, functi
   IndexModel.addNewStudent(res.pool, data).then(function (result) {
     var smsData = {
       to: data.candidateEmailId,
-      subject: "Testing Shastra™️ Registration For Live Webinar on Selenium 👍",
+      subject: "Testing Shastra™️ Registration For Live Webinar on AGILE SCRUM 👍",
       message: emailTemplate.webinar("".concat(data.candidateFName, " ").concat(data.candidateLName))
     };
     return EmailModule.sendEmailGmail(smsData);
