@@ -3,6 +3,7 @@ var middleware = require("./middleware");
 var IndexModel = require("../app/model/IndexModel");
 var EmailModule = require("../app/model/emailModel");
 var emailTemplate = require("../app/model/emailTemplate");
+
 /* GET home page. */
 router.get("/", function (req, res, next) {
   res.render("index", { title: "Testing Shastra | Training | Placement" });
@@ -11,6 +12,12 @@ router.get("/", function (req, res, next) {
 router.get("/assignments", function (req, res, next) {
   res.render("pages/assignments", {
     title: "Testing Shastra | Programs | Assignment",
+  });
+});
+
+router.get("/notes", function (req, res, next) {
+  res.render("pages/notes", {
+    title: "Testing Shastra | Programs | Notes",
   });
 });
 

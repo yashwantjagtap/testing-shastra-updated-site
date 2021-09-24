@@ -3916,14 +3916,14 @@ ul#follow_us_contacts li a:hover i {
 		display: block !important;
 	}
 	.custom-logo-nav{
-		display: none ;
+		/* display: none !important; */
 	}
 }
 .custom-logo-nav{
 	filter: brightness(0) invert(1);
 	float: left;
 	padding: 10px 0px 7px;
-	display: block;
+	display: block ;
 }
 .mb-custom-logo-nav{
 	float: left;
