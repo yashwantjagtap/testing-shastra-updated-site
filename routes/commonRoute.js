@@ -178,7 +178,7 @@ router.post(
 router.post("/save-enquiry", function (req, res) {
   var data = req.body;
   var smsData = {
-    to: data.contactEmailId,
+    to: "info@testingshastra.com",
     subject: "Enquiry On Testing Shastra",
     message: emailTemplate.enquiry(data),
   };
