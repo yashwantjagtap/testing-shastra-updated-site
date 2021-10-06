@@ -3660,6 +3660,7 @@ ul#follow_us_contacts li a:hover i {
 }
 .bx-wrapper img {
     max-width: 100%;
+
 }
 .hexagon img {
 	height: 300px;
@@ -3740,10 +3741,10 @@ ul#follow_us_contacts li a:hover i {
 	.hexagon img{
 		height: 110px !important;
 		width: 110px !important;
-		padding: 1% 0% 0% 12% !important;
+		padding: 0% 17% 0% 12% !important; 
 		position: absolute !important;
-		top: 18px !important;
-		left: 14px !important;
+		/* top: 18px !important;
+		left: 14px !important; */
 	}
 	#header_slider_wrap .header_slider .webinar-slider .bg-absolute-right .webinar-conductor-name {
 		padding-left: 10%;
