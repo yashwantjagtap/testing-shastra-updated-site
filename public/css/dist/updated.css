@@ -115,7 +115,7 @@ i {
 .key-feature {
   position: absolute;
   min-width: inherit;
-  top: 85%;
+  top: 90% !important;
   left: 9%;
   right: 9%;
   margin: auto;
