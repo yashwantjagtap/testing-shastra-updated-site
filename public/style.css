@@ -3665,7 +3665,7 @@ ul#follow_us_contacts li a:hover i {
 .hexagon img {
 	height: 300px;
     width: 300px;
-    padding: 0% 0% 0% 0%;
+    padding: 0% 15% 0% 13%;
     position: absolute;
     top: 36px;
     left: 18px;
@@ -3741,7 +3741,7 @@ ul#follow_us_contacts li a:hover i {
 	.hexagon img{
 		height: 110px !important;
 		width: 110px !important;
-		padding: 0% 15% 0% 13% !important;
+		padding: 0% 2% 0% 9% !important;
 		position: absolute !important;
 		top: 18px !important;
 		left: 14px !important;
