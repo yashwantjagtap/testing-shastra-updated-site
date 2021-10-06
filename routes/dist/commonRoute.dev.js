@@ -152,7 +152,7 @@ router.post("/save-webinar-candidate", middleware.checkForPoolConnection, functi
   IndexModel.addNewStudent(res.pool, data).then(function (result) {
     var smsData = {
       to: data.candidateEmailId,
-      subject: "Testing Shastra™️ Registration For Live Webinar on AGILE SCRUM 👍",
+      subject: "Testing Shastra™️ Registration For Live Webinar on Selenium 👍",
       message: emailTemplate.webinar("".concat(data.candidateFName, " ").concat(data.candidateLName))
     };
     return EmailModule.sendEmailGmail(smsData);
@@ -171,7 +171,7 @@ router.post("/save-webinar-candidate", middleware.checkForPoolConnection, functi
 router.post("/save-enquiry", function (req, res) {
   var data = req.body;
   var smsData = {
-    to: data.contactEmailId,
+    to: "info@testingshastra.com",
     subject: "Enquiry On Testing Shastra",
     message: emailTemplate.enquiry(data)
   };
