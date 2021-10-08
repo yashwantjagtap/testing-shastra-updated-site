@@ -3613,6 +3613,9 @@ ul#follow_us_contacts li a:hover i {
 	width: 60%;
 	color: #fff;
 }
+#header_slider_wrap .header_slider .webinar-slider .bg-absolute-right::after{
+	position: relative !important;
+}
 #header_slider_wrap .header_slider .webinar-slider .bg-absolute-right .webinar-conductor-name{
 	text-align:center;
 }
@@ -3633,19 +3636,25 @@ ul#follow_us_contacts li a:hover i {
 	padding-right:45px;
 }
 /******** hexagon ***************/
-
-.hexagon{
+/* .outer-hex-body {
+	visibility: visible;
+	position: absolute;
+} */
+ .hexagon{
 	height: 360px;
 	width: 360px;
-	background-color: #2d7fc7;
-	clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
+	position: relative;
+	/* background-color: #2a2a72; */
+	/* background-image: linear-gradient(155deg, #2a2a72 20%, #009ffd 74%); */
+	/* clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%); */
 	transform:rotate(90deg);
-}
+	/* overflow: hidden !important; */
+} 
   
-.hexagon::before {
+/* .hexagon::after {
 	content: "";
 	display: block;
-	position: relative;
+	position: absolute;
 	top: 5px;
 	left: 5px;
 	bottom :50px;
@@ -3653,7 +3662,9 @@ ul#follow_us_contacts li a:hover i {
 	width: 350px;
 	background-color: #f3f3f3;
 	clip-path: polygon(92.32051% 40%, 93.79385% 43.1596%, 94.69616% 46.52704%, 95% 50%, 94.69616% 53.47296%, 93.79385% 56.8404%, 92.32051% 60%, 79.82051% 81.65064%, 77.82089% 84.50639%, 75.35575% 86.97152%, 72.5% 88.97114%, 69.3404% 90.44449%, 65.97296% 91.34679%, 62.5% 91.65064%, 37.5% 91.65064%, 34.02704% 91.34679%, 30.6596% 90.44449%, 27.5% 88.97114%, 24.64425% 86.97152%, 22.17911% 84.50639%, 20.17949% 81.65064%, 7.67949% 60%, 6.20615% 56.8404%, 5.30384% 53.47296%, 5% 50%, 5.30384% 46.52704%, 6.20615% 43.1596%, 7.67949% 40%, 20.17949% 18.34936%, 22.17911% 15.49361%, 24.64425% 13.02848%, 27.5% 11.02886%, 30.6596% 9.55551%, 34.02704% 8.65321%, 37.5% 8.34936%, 62.5% 8.34936%, 65.97296% 8.65321%, 69.3404% 9.55551%, 72.5% 11.02886%, 75.35575% 13.02848%, 77.82089% 15.49361%, 79.82051% 18.34936%);
-}
+	overflow: hidden !important;
+	visibility: visible !important;
+}*/ 
 
 #header_slider_wrap .bx-wrapper ul li img {
     width: 100%;
@@ -3662,14 +3673,45 @@ ul#follow_us_contacts li a:hover i {
     max-width: 100%;
 
 }
-.hexagon img {
+.hexagon svg{
+	position: absolute;
 	height: 300px;
     width: 300px;
-    padding: 0% 15% 0% 13%;
-    position: absolute;
-    top: 36px;
-    left: 18px;
-    transform: rotate(-90deg);
+	top: 23px;
+    left: 9px;
+}
+.hexagon svg image{
+	transform: scale(0.9,);
+	transition: transform 0.2s ease-in;
+}
+/* .hexagon svg image:hover {
+	transform: scale(1.05);cursor: pointer;
+} */
+
+.image__foreground {
+	/* filter: drop-shadow(0px 0px 3px #f3f3f3); */
+	filter: drop-shadow(2px 1px 0 #fff) 
+          drop-shadow(-1px -1px 0 #fff);
+	border: 3px solid red;
+	transform-origin: 50% 50%;
+	transform: translateY(4px) scale(1, 1);
+	transition: transform 0.2s ease-in;
+}
+.circle_bg{
+	filter: drop-shadow(0px 0px 0 );}
+.hexagon svg {
+	height: 300px;
+    width: 300px;
+    /* padding: 0% 15% 0% 13%; */
+    /* position: absolute; */
+    /* top: 23px; */
+    /* left: 9px; */
+	/* z-index: 55; */
+    /* object-fit: contain; */
+    transform: rotate(-90deg) scale(1.1);
+	/* overflow-y: auto !important; */
+	/* visibility: visible !important; */
+
 }
 /******************************responsive webinar slide*****************************/
 @media (max-width: 480px){

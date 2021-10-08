@@ -11,30 +11,6 @@
         <!-- #site-navigation --> 
         <div id="header_slider_wrap">
           <ul class="header_slider">
-            //- <li class="webinar-slider slider_content_loop">
-            //-   <img width="1878" height="874" src="images/background/webinar-bg.png" class="webinar-image attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
-            //-     .container
-            //-       .row
-            //-         .col-8.bg-absolute-left
-            //-           .webinar-info
-            //-             h3.live-seminar live Webinar on 
-            //-             h1.seminar-topic Selenium
-            //-             p.webinar-text Agile Scrum is most sought after Project Management tool which help IT professionals to manage Project. This FREE LIVE Webinar explains Agile Scrum in depth. Do not miss this opportunity.
-            //-           .date-and-time
-            //-             span.date
-            //-               <i class="fa fa-calendar" aria-hidden="true"></i><span>11 th & 12 th oct 2021</span>
-            //-             span.time    
-            //-               <i class="fa fa-clock-o" aria-hidden="true"></i><span>9 am to 11 am</span>
-            //-           .register
-            //-             <a href="/webinar-registration"><button type="button" class="button-updated" id="registerModalBtn">Register Here</button></a>
-            //-         .col-4.bg-absolute-right  
-            //-           .hexagon
-            //-             //- .hexagon-inner
-            //-             img(src="/images/background/avinash.png")
-            //-           .webinar-conductor-name
-            //-             h3.name mr.Avinash Pingale
-            //-             p.text sr. Automation test engineer and founder at testing shastra 
-            //- </li>
             <li class="webinar-slider slider_content_loop">
               <img width="1878" height="874" src="images/background/webinar-bg.png" class="webinar-image attachment-enlighten-slider-image size-enlighten-slider-image wp-post-image" alt=""/>
                 .container
@@ -51,10 +27,27 @@
                           <i class="fa fa-clock-o" aria-hidden="true"></i><span>9 am to 11 am</span>
                       .register
                         <a href="/webinar-registration"><button type="button" class="button-updated" id="registerModalBtn">Register Here</button></a>
-                    .col-4.bg-absolute-right  
+                    .col-4.bg-absolute-right 
+                      //- .outer-hex-body 
                       .hexagon
-                        //- .hexagon-inner
-                        img(src="images/background/avinash.png")
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -10 100 120" width="213" class="image">
+                          <title>This is an image title</title>
+                          <desc>This is an image description</desc>
+                          <defs>
+                            <clipPath id="maskImage" clipPathUnits="userSpaceOnUse">
+                              <path d="M100 63A50 50 0 110 70C0 42 20 0 48 0c27 0 52 42 52 70z" />
+                            </clipPath>
+                            <clipPath id="maskBackground" clipPathUnits="userSpaceOnUse">
+                              <path d="M190 101a50 50 0 01-50 50 50 50 0 01-50-50 50 50 0 0150-50 50 50 0 0150 50z" />
+                            </clipPath>
+                          </defs>
+                          <!-- Background image -->
+                          <g clip-path="url(#maskImage)" transform="translate(0 -7)">
+                            <image clip-path="url(#maskBackground)" width="120" height="120" x="70" y="28" class="circle_bg" href="/images/background/circleBG.jpg" transform="translate(-90 -31)" />
+                          <!-- Foreground image -->
+                            <image width="120" height="120" x="-8" y="0"  class="image__foreground" href="/images/background/final.png" />
+                          </g>
+                        </svg>
                       .webinar-conductor-name
                         h3.name mr.avinash pingale
                         p.text sr. Automation test engineer and founder at testing shastra 
