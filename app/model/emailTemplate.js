@@ -147,7 +147,7 @@ var template = {
         <td bgcolor="transparent" align="left" style="padding:0;Margin:0;padding-top:10px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">Thank you for registering "Live Webinar on Selenium".&nbsp;</p></td>
         </tr>
         <tr style="border-collapse:collapse">
-        <td bgcolor="transparent" align="left" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">Here is your personalized joining link: https://us02web.zoom.us/meeting/register/tZUpd-2gqTstGtBe6ULxkOOYWp5Fbm5l4Kff</p></td>
+        <td bgcolor="transparent" align="left" style="padding:0;Margin:0;padding-top:5px;padding-bottom:5px"><p style="Margin:0;-webkit-text-size-adjust:none;-ms-text-size-adjust:none;mso-line-height-rule:exactly;font-family:roboto, 'helvetica neue', helvetica, arial, sans-serif;line-height:21px;color:#666666;font-size:14px">Here is your personalized joining link: https://us02web.zoom.us/meeting/register/tZYocuysrz4oHtEre40wYX9YaYy_tYy9KqMK</p></td>
         </tr>
         </table></td>
         </tr>
