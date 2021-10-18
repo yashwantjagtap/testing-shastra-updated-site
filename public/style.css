@@ -3773,11 +3773,18 @@ ul#follow_us_contacts li a:hover i {
 		height: 125px !important;
 		width: 125px !important;
 	}
-	.hexagon::before{
+	/* .hexagon::before{
 		height: 120px !important;
 		width: 120px !important;
 		top: 2.5px;
 		left: 2.5px;
+	} */
+	.hexagon svg{
+		position: absolute;
+		height: 125px;
+		width: 125px;
+		top: 23px;
+		left: 9px;
 	}
 	.hexagon img{
 		height: 110px !important;
