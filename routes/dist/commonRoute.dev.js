@@ -16,6 +16,12 @@ router.get("/", function (req, res, next) {
   res.render("index", {
     title: "Testing Shastra | Training | Placement"
   });
+}); // get Mock Interview Remarks
+
+router.get("/mock-interview-remarks", function (req, res, next) {
+  res.render("mockInterview", {
+    title: "Testing Shastra | Training | Placement"
+  });
 });
 router.get("/assignments", function (req, res, next) {
   res.render("pages/assignments", {

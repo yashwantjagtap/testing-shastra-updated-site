@@ -1,44 +1,5 @@
 <!DOCTYPE html>
-<html>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-<style>
-  .assignment-page{
-  height: 20vh;
-  margin: 100px 200px;
-  text-align: center;
-  background:#00000 !important;
-  
-  }
-  h2{
-  font-size:28px;
-  }
-  .alert-btn{
-  padding: 5px 20px;
-  background: #2d7fc7;
-  border-radius: 30px;
-  color:#ffffff;
-  font-size:18px;
-  }
-  .alert-btn:hover{
-    color:#2d7fc7;
-    background:#fff;
-    border:2px solid #2d7fc7;
-    font-weight:600;  
-  }
-  #demo{
-    margin-top:30px;
-    color:#00000 !important;
-    font-weight:bold;
-    font-size:18px;
-  }
-  label{
-    font-weight:bold;
-    font-size:18px;
-  }
-  #user{
-    color:#00000 !important;
-  }
-</style><body><head>
+<html lang="en-US"><head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="profile" href="https://gmpg.org/xfn/11" />
@@ -109,7 +70,8 @@
 <link rel="icon" href="/images/Favicon.png" sizes="192x192" />
 <link rel="apple-touch-icon-precomposed" href="/images/Favicon.png" />
 <meta name="msapplication-TileImage" content="/images/Favicon.png" />
-</head><div class="ak-container">
+</head><div id="page" class="site">
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a><div class="ak-container">
 <div class="social_htext_wrap">
 <div class="header_text">
 <span class="text_wrap">Join with us and be a part of the success</span>
@@ -234,13 +196,169 @@
 </ul>
 </div>
 </div>
-</nav><div class="assignment-page">
-<h2>Click the button to display an alert boxs.</h2>
-<label>Your Name:</label>
-<input id="user" name="YourName" />
-<div class="click-me" style = margin:30px>
-<button class="alert-btn" onclick="myFunction()">Click Me</button>
+</nav><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<style>
+  .Mock-link-page-bg{
+    background:#F3F3F3;
+    padding:50px;
+  }
+  .center-div {
+    margin: auto;
+  }
+  .mock-title{
+    text-align:center;
+    padding:20px;
+    border-bottom:5px solid #2D7FC7;
+    //- border-radius:50px;
+  }
+  .form-group{
+    background:#fff;
+    padding:20px;
+    border: 1px solid #ebe9e9;
+    border-radius:10px;
+  
+  }
+  label{
+    font-size:18px;
+    color:#666;
+    text-transform:capitalize;
+  }
+  .form-control{
+    margin :20px 0px;
+    border :none !important; 
+    border-bottom:1px solid #E0E0E0 !important;
+    width:50%;
+    outline:none !important;
+    border-radius:0px !important;
+  }
+  .form-control:focus{
+    outline:none !important;
+    box-shadow:none !important;
+    border-bottom:1px solid blue !important;
+  }
+  .spread{
+    margin:10px;
+  
+  }
+  .spread > label{
+    padding: 0px 30px 0px 5px;
+  }  
+  .btn-primary{
+    background:#673AB7;
+    border:none !important;
+    outline:none !important;
+    box-shadow:none !important;
+    padding:  10px 30px;  
+  }  
+  
+</style>
+<div class="section Mock-link-page-bg">       
+  <div class="container form-background">
+    <div class="row">
+      <div class="col-8 center-div"> 
+        <h1 class="mock-title">Mock-Interview-Remarks</h1><form method="post" action="">
+<div class="form-group">
+<label for="Candidate Name">Candidate Name </label>
+<input type="text" class="form-control" name="candidateName" placeholder="Candidate Name ">
 </div>
+<div class="form-group">
+<label for="Candidate Batch Code">Candidate Batch Code </label>
+<input type="text" class="form-control" name="candidateBatchCode" placeholder="Candidate Batch Code">
+</div>
+<div class="form-group">
+<label for="Core Java Ratings">Core Java Ratings(out of 5)</label><br>
+        <div class="spread"><input type="radio" id="java1" name="coreJavaRating" value="1">
+<label for="java1">1</label>
+<input type="radio" id="java2" name="coreJavaRating" value="2">
+<label for="java2">2</label>
+<input type="radio" id="java3" name="coreJavaRating" value="3">
+<label for="java3">3</label>
+<input type="radio" id="java4" name="coreJavaRating" value="4">
+<label for="java4">4</label>
+<input type="radio" id="java5" name="coreJavaRating" value="5">
+<label for="java5">5</label>
+        </div></div>
+<div class="form-group">
+<label for="Selenium Ratings">Selenium Ratings(out of 5)</label>
+        <div class="spread"><input type="radio" id="Selenium1" name="seleniumRating" value="1">
+<label for="Selenium1">1</label>
+<input type="radio" id="Selenium2" name="seleniumRating" value="2">
+<label for="Selenium2">2</label>
+<input type="radio" id="Selenium3" name="seleniumRating" value="3">
+<label for="Selenium3">3</label>
+<input type="radio" id="Selenium4" name="seleniumRating" value="4">
+<label for="Selenium4">4</label>
+<input type="radio" id="Selenium5" name="seleniumRating" value="5">
+<label for="Selenium5">5</label>
+        </div></div>
+<div class="form-group">
+<label for="Tools Knowledge">Tools Knowledge (Maven/Git/JIRA/TestRail)</label>
+        <div class="spread"><input type="radio" id="Tools1" name="toolsRating" value="1">
+<label for="Tools1">1</label>
+<input type="radio" id="Tools2" name="toolsRating" value="2">
+<label for="Tools2">2</label>
+<input type="radio" id="Tools3" name="toolsRating" value="3">
+<label for="Tools3">3</label>
+<input type="radio" id="Tools4" name="toolsRating" value="4">
+<label for="Tools4">4</label>
+<input type="radio" id="Tools5" name="toolsRating" value="5">
+<label for="Tools5">5</label>              
+        </div></div>
+<div class="form-group">
+<label for="Automation Framework">Automation Framework</label>
+        <div class="spread"><input type="radio" id="Framework1" name="frameworkRating" value="1">
+<label for="Framework1">1</label>
+<input type="radio" id="Framework2" name="frameworkRating" value="2">
+<label for="Framework2">2</label>
+<input type="radio" id="Framework3" name="frameworkRating" value="3">
+<label for="Framework3">3</label>
+<input type="radio" id="Framework4" name="frameworkRating" value="4">
+<label for="Framework4">4</label>
+<input type="radio" id="Framework5" name="frameworkRating" value="5">
+<label for="Framework5">5</label> 
+        </div></div>
+<div class="form-group">
+<label for=" Project Explanation"> Project Explanation</label>
+        <div class="spread"><input type="radio" id="Project1" name="ProjectRating" value="1">
+<label for="Project1">1</label>
+<input type="radio" id="Project2" name="ProjectRating" value="2">
+<label for="Project2">2</label>
+<input type="radio" id="Project3" name="ProjectRating" value="3">
+<label for="Project3">3</label>
+<input type="radio" id="Project4" name="ProjectRating" value="4">
+<label for="Project4">4</label>
+<input type="radio" id="Project5" name="ProjectRating" value="5">
+<label for="Project5">5</label> 
+        </div></div>
+<div class="form-group">
+<label for="Comments/Suggestions">Comments/Suggestions</label>
+<input type="text" class="form-control" name="Comments" placeholder="Comments/Suggestions">
+</div>
+<div class="form-group">
+<label for="Overall ratings ">Over all ratings</label>
+        <div class="spread"><input type="radio" id="overallRating1" name="overallRating" value="1">
+<label for="overallRating1">1</label>
+<input type="radio" id="overallRating2" name="overallRating" value="2">
+<label for="overallRating2">2</label>
+<input type="radio" id="overallRating3" name="overallRating" value="3">
+<label for="overallRating3">3</label>
+<input type="radio" id="overallRating4" name="overallRating" value="4">
+<label for="overallRating4">4</label>
+<input type="radio" id="overallRating5" name="overallRating" value="5">
+<label for="overallRating5">5</label> 
+        </div></div>
+<div class="form-group">
+<label for="Ready to Apply">Ready to Apply ? </label>
+        <div class="spread"><input type="radio" id="ReadyYes" name="selected" value="yes">
+<label for="ReadyYes">yes</label><br>
+<input type="radio" id="ReadyNo" name="selected" value="no">
+<label for="ReadyNo">no</label>
+        </div></div>   
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>         
+      </div>
+    </div>
+  </div>
 </div>
 <div class="scrollTop"><i class="fa fa-arrow-up" onclick="topFunction()" id="myBtn"></i></div>
 <footer>
@@ -287,13 +405,9 @@
               <li><i class="fa fa-map-marker" aria-hidden="true"><a href="/contact-us">Vidya Nagar, New Sangvi, Pune</a></i></li>
               <li><i class="fa fa-phone" aria-hidden="true"><a href="tel:9130502135">+91-9130502135</a></i></li>
               <li><i class="fa fa-envelope-o" aria-hidden="true"><a target="_blank" href="mailto:info@testingshastra.com" class="custom-logo-link" rel="home" itemprop="url"> info@testingshastra.com
-                  <script>
-                    function myFunction() {
-                      var name=document.getElementById("user").value;
-                      alert("Hello "+name+"\nWelcome to Testing Shastra!");
-                    }
-                    
-                  </script></body></i></li>
+                  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+                  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script></i></li>
             </ul>
           </div>
         </div>
@@ -301,4 +415,5 @@
       <div class="footer-bottom-line"></div>
     </div>
   </div>
-</footer></html>
+</footer></body>
+</html>    
